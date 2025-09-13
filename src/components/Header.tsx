@@ -38,10 +38,10 @@ export default function Header() {
   }];
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border/20 shadow-soft' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 mx-[140px]">
+        <div className="flex items-center justify-between h-24 max-w-7xl mx-auto">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img src={logo} alt="Hebbera Design Logo" className="h-10 w-10" />
+            <img src={logo} alt="Hebbera Design Logo" className="h-12 w-12 sm:h-14 sm:w-14 hover:scale-110 transition-all duration-300" />
             <span className="text-2xl font-playfair font-bold text-gradient">
               Hebbera Design
             </span>
