@@ -341,10 +341,10 @@
     @apply bg-[var(--gradient-dark)] text-foreground;
   }
 
-  .section-connector {
-    @apply absolute -bottom-1 left-0 right-0 h-32 bg-[var(--gradient-hero)] 
-           clip-path-[polygon(0_100%,100%_100%,100%_0)] z-10;
-  }
+.section-connector {
+  @apply absolute -bottom-1 left-0 right-0 h-32 bg-[var(--gradient-hero)] z-10;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0);
+}
 
   /* Scroll Triggered Animations */
   .scroll-reveal {
