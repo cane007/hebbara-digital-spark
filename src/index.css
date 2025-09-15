@@ -236,12 +236,12 @@
     @apply bg-card/90 backdrop-blur-xl border-2 border-primary/20 rounded-3xl
            shadow-[var(--shadow-intense)] hover:shadow-[var(--shadow-glow)]
            transition-[var(--transition-elastic)] hover:-translate-y-3 hover:scale-105
-           relative overflow-hidden group;
+           relative overflow-hidden;
   }
 
   .card-premium::before {
     content: '';
-    @apply absolute inset-0 bg-[var(--gradient-mesh)] opacity-5 group-hover:opacity-15 
+    @apply absolute inset-0 bg-[var(--gradient-mesh)] opacity-5 group-hover:opacity-20 
            transition-opacity duration-700;
   }
 
