@@ -1,42 +1,51 @@
 import { ArrowRight, Play, Sparkle, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroBg from '@/assets/hero-bg.jpg';
+import React from 'react';
+
+// Declare global dataLayer type
+declare global {
+  interface Window {
+    dataLayer?: any[];
+  }
+}
 
 export default function Hero() {
+  // Track page scroll for analytics
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    
+    if (scrollPosition > windowHeight * 0.3 && window.dataLayer) {
+      window.dataLayer.push({
+        'event': 'page_scroll',
+        'scroll_depth': '30%',
+        'page': window.location.pathname
+      });
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
-      {/* Dynamic Background Image */}
+      {/* Optimized Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 scale-105 animate-spin-slow" 
-        style={{ backgroundImage: `url(${heroBg})` }} 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" 
+        style={{ backgroundImage: `url(${heroBg})` }}
       />
       
       {/* Multi-layer Gradient System */}
       <div className="absolute inset-0 bg-gradient-hero" />
       <div className="absolute inset-0 bg-gradient-mesh opacity-20" />
       
-      {/* Revolutionary Animated Background Elements */}
+      {/* Simplified Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="floating absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl shadow-glow"></div>
-        <div className="floating-alt absolute top-1/3 right-1/4 w-[28rem] h-[28rem] bg-secondary/25 rounded-full blur-3xl shadow-neon" 
-             style={{ animationDelay: '2s' }}></div>
-        <div className="orbital absolute bottom-1/4 left-1/3 w-80 h-80 bg-accent/20 rounded-full blur-2xl"></div>
-        <div className="floating absolute top-1/2 right-1/3 w-64 h-64 bg-tertiary/15 rounded-full blur-3xl" 
-             style={{ animationDelay: '4s' }}></div>
-        
-        {/* Particle System */}
-        {[...Array(12)].map((_, i) => (
-          <div 
-            key={i}
-            className={`absolute w-2 h-2 bg-primary-glow rounded-full animate-floating opacity-60`}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 8}s`,
-              animationDuration: `${6 + Math.random() * 6}s`
-            }}
-          />
-        ))}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-secondary/15 rounded-full blur-3xl opacity-40"></div>
       </div>
 
       {/* Revolutionary Content */}
@@ -48,49 +57,68 @@ export default function Hero() {
             <Zap className="absolute -top-2 -right-12 w-8 h-8 text-accent-glow animate-bounce" />
           </div>
           
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-playfair font-bold text-foreground mb-8 leading-none relative">
-            <span className="text-neon drop-shadow-2xl">Vaša digitalna</span>
-            <span className="block text-gradient animate-gradient-x text-shadow-glow bg-gradient-rainbow bg-clip-text text-transparent text-7xl sm:text-8xl lg:text-9xl">
-              TRANSFORMACIJA
-            </span>
-            <span className="block text-electric text-5xl sm:text-6xl lg:text-7xl mt-4">
-              počinje ovdje
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-playfair font-bold text-foreground mb-6 leading-tight">
+            <span className="block text-primary text-shadow-glow">Lovable</span>
+            <span className="block text-2xl sm:text-3xl lg:text-4xl font-inter font-light text-foreground/90 mt-2">
+              Build for the web 20x faster
             </span>
           </h1>
           
-          <p className="text-2xl sm:text-3xl text-foreground/90 mb-12 max-w-4xl mx-auto leading-relaxed font-inter font-light">
-            Kreiramo <span className="text-primary font-bold">izuzetne web stranice</span>, pokretamo 
-            <span className="text-secondary font-bold"> uspješne digitalne kampanje</span> i 
-            pomažemo vašem biznisu da postane <span className="text-accent font-bold">vidljiv na internetu</span>.
+          <p className="text-lg sm:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed font-inter">
+            Kreirajte moderne web aplikacije i stranice brzinom koja će vas iznenaditi. 
+            Naša AI-powered platforma omogućava vam da izgradite svoj projekt 
+            <span className="text-primary font-semibold"> 20 puta brže</span> nego ikad prije.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-16">
-            <Button className="btn-hero group px-12 py-6 text-xl relative overflow-hidden">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+            <Button 
+              className="btn-cta-primary group px-10 py-4 text-lg font-semibold relative overflow-hidden"
+              onClick={() => {
+                if (typeof window !== 'undefined' && window.dataLayer) {
+                  window.dataLayer.push({
+                    'event': 'cta_click',
+                    'element': 'hero_primary_cta',
+                    'page': window.location.pathname
+                  });
+                }
+              }}
+            >
               <span className="relative z-10 flex items-center">
-                Započnite transformaciju
-                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
+                Start building 20x faster
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </span>
             </Button>
             
-            <Button className="btn-glass group px-12 py-6 text-xl">
-              <Play className="mr-3 h-6 w-6 group-hover:scale-125 transition-transform duration-300" />
-              Pogledajte naš rad
+            <Button 
+              className="btn-secondary-cta group px-10 py-4 text-lg font-medium"
+              onClick={() => {
+                if (typeof window !== 'undefined' && window.dataLayer) {
+                  window.dataLayer.push({
+                    'event': 'cta_click',
+                    'element': 'hero_secondary_cta',
+                    'page': window.location.pathname
+                  });
+                }
+              }}
+            >
+              <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+              Pogledajte kako funkcionira
             </Button>
           </div>
 
-          {/* Revolutionary Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 text-foreground">
-            <div className="animate-bounce-in card-interactive p-8 rounded-3xl" style={{ animationDelay: '0.2s' }}>
-              <div className="text-6xl font-bold text-gradient bg-gradient-primary bg-clip-text text-transparent mb-2">150+</div>
-              <div className="text-foreground/80 text-lg font-medium">Zadovoljnih klijenata</div>
+          {/* Key Statistics */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-foreground">
+            <div className="text-center p-6">
+              <div className="text-4xl font-bold text-primary mb-2">10,000+</div>
+              <div className="text-foreground/70 text-base">Apps built</div>
             </div>
-            <div className="animate-bounce-in card-interactive p-8 rounded-3xl" style={{ animationDelay: '0.4s' }}>
-              <div className="text-6xl font-bold text-gradient bg-gradient-secondary bg-clip-text text-transparent mb-2">200+</div>
-              <div className="text-foreground/80 text-lg font-medium">Uspješnih projekata</div>
+            <div className="text-center p-6">
+              <div className="text-4xl font-bold text-secondary mb-2">20x</div>
+              <div className="text-foreground/70 text-base">Faster development</div>
             </div>
-            <div className="animate-bounce-in card-interactive p-8 rounded-3xl" style={{ animationDelay: '0.6s' }}>
-              <div className="text-6xl font-bold text-gradient bg-gradient-accent bg-clip-text text-transparent mb-2">5+</div>
-              <div className="text-foreground/80 text-lg font-medium">Godina iskustva</div>
+            <div className="text-center p-6">
+              <div className="text-4xl font-bold text-accent mb-2">99%</div>
+              <div className="text-foreground/70 text-base">Developer satisfaction</div>
             </div>
           </div>
         </div>
