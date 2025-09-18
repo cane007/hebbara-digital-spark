@@ -60,21 +60,20 @@ export default function Hero() {
           </div>
           
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-playfair font-bold text-foreground mb-6 leading-tight">
-            <span className="block text-primary text-shadow-glow">Lovable</span>
+            <span className="block text-primary text-shadow-glow">Hebbera Design</span>
             <span className="block text-2xl sm:text-3xl lg:text-4xl font-inter font-light text-foreground/90 mt-2">
-              Build for the web 20x faster
+              Izgradite web aplikaciju u 12 minuta
             </span>
           </h1>
           
           <p className="text-lg sm:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed font-inter">
-            Kreirajte moderne web aplikacije i stranice brzinom koja će vas iznenaditi. 
-            Naša AI-powered platforma omogućava vam da izgradite svoj projekt 
-            <span className="text-primary font-semibold"> 20 puta brže</span> nego ikad prije.
+            Vidite kako naša AI tehnologija pretvara vašu ideju u gotovu web aplikaciju.
+            <span className="text-primary font-semibold"> Bez kodiranja, bez komplikacija</span> - samo opišite što trebate.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
             <Button 
-              className="btn-cta-primary group px-10 py-4 text-lg font-semibold relative overflow-hidden"
+              className="btn-cta-primary group px-12 py-6 text-xl font-bold relative overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300"
               onClick={() => {
                 if (typeof window !== 'undefined' && window.dataLayer) {
                   window.dataLayer.push({
@@ -86,13 +85,13 @@ export default function Hero() {
               }}
             >
               <span className="relative z-10 flex items-center">
-                Start building 20x faster
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                POČNITE GRADITI SADA
+                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
               </span>
             </Button>
             
             <Button 
-              className="btn-secondary-cta group px-10 py-4 text-lg font-medium"
+              className="btn-secondary-cta group px-10 py-6 text-lg font-semibold border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300"
               onClick={() => {
                 if (typeof window !== 'undefined' && window.dataLayer) {
                   window.dataLayer.push({
@@ -104,23 +103,42 @@ export default function Hero() {
               }}
             >
               <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-              Pogledajte kako funkcionira
+              30-sekundni demo
             </Button>
+          </div>
+
+          {/* Social Proof */}
+          <div className="mb-12 text-center">
+            <p className="text-sm text-foreground/60 mb-4">Povjerenje stotina klijenata</p>
+            <div className="flex flex-wrap justify-center items-center gap-8 text-foreground/70">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <span className="text-sm">500+ uspješnih projekata</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                <span className="text-sm">Prosječno 90% brži razvoj</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                <span className="text-sm">24/7 AI podrška</span>
+              </div>
+            </div>
           </div>
 
           {/* Key Statistics */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-foreground">
-            <div className="text-center p-6">
-              <div className="text-4xl font-bold text-primary mb-2">10,000+</div>
-              <div className="text-foreground/70 text-base">Apps built</div>
+            <div className="text-center p-6 bg-white/5 rounded-lg backdrop-blur-sm">
+              <div className="text-4xl font-bold text-primary mb-2">500+</div>
+              <div className="text-foreground/70 text-base">Završenih projekata</div>
             </div>
-            <div className="text-center p-6">
-              <div className="text-4xl font-bold text-secondary mb-2">20x</div>
-              <div className="text-foreground/70 text-base">Faster development</div>
+            <div className="text-center p-6 bg-white/5 rounded-lg backdrop-blur-sm">
+              <div className="text-4xl font-bold text-secondary mb-2">12min</div>
+              <div className="text-foreground/70 text-base">Prosječno vrijeme izrade</div>
             </div>
-            <div className="text-center p-6">
-              <div className="text-4xl font-bold text-accent mb-2">99%</div>
-              <div className="text-foreground/70 text-base">Developer satisfaction</div>
+            <div className="text-center p-6 bg-white/5 rounded-lg backdrop-blur-sm">
+              <div className="text-4xl font-bold text-accent mb-2">100%</div>
+              <div className="text-foreground/70 text-base">Zadovoljstvo klijenata</div>
             </div>
           </div>
         </div>
