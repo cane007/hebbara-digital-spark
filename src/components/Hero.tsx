@@ -36,6 +36,8 @@ export default function Hero() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" 
         style={{ backgroundImage: `url(${heroBg})` }}
+        role="img"
+        aria-label="Modern web development workspace background"
       />
       
       {/* Multi-layer Gradient System */}
