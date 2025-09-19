@@ -1,7 +1,8 @@
-import { ArrowRight, Play, Sparkle, Zap } from 'lucide-react';
+import { ArrowRight, Play, Sparkle, Zap, Clock, Users, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroBg from '@/assets/hero-bg.jpg';
 import React from 'react';
+import InteractiveDemo from './InteractiveDemo';
 
 // Declare global dataLayer type
 declare global {
@@ -62,18 +63,19 @@ export default function Hero() {
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-playfair font-bold text-foreground mb-6 leading-tight">
             <span className="block text-primary text-shadow-glow">Hebbera Design</span>
             <span className="block text-2xl sm:text-3xl lg:text-4xl font-inter font-light text-foreground/90 mt-2">
-              Izgradite web aplikaciju u 12 minuta
+              Vaša web aplikacija u samo 12 minuta
             </span>
           </h1>
           
-          <p className="text-lg sm:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed font-inter">
-            Vidite kako naša AI tehnologija pretvara vašu ideju u gotovu web aplikaciju.
-            <span className="text-primary font-semibold"> Bez kodiranja, bez komplikacija</span> - samo opišite što trebate.
+          <p className="text-lg sm:text-xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed font-inter">
+            <span className="text-accent font-bold text-2xl block mb-2">Opišite ideju → AI kreira kod → Deploy u 1 kliku</span>
+            Bez programiranja, bez komplikacija. Samo recite našem AI što trebate i gledajte kako nastaje vaša aplikacija.
+            <span className="text-primary font-semibold"> Garantirano za 12 minuta ili besplatno!</span>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
             <Button 
-              className="btn-cta-primary group px-12 py-6 text-xl font-bold relative overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300"
+              className="btn-cta-primary group px-16 py-8 text-2xl font-bold relative overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse-glow"
               onClick={() => {
                 if (typeof window !== 'undefined' && window.dataLayer) {
                   window.dataLayer.push({
@@ -85,13 +87,14 @@ export default function Hero() {
               }}
             >
               <span className="relative z-10 flex items-center">
-                POČNITE GRADITI SADA
-                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
+                STVORITE APLIKACIJU SADA
+                <ArrowRight className="ml-3 h-8 w-8 group-hover:translate-x-2 transition-transform duration-300" />
               </span>
+              <div className="absolute inset-0 bg-gradient-neon opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
             </Button>
             
             <Button 
-              className="btn-secondary-cta group px-10 py-6 text-lg font-semibold border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300"
+              className="btn-glass group px-12 py-8 text-xl font-semibold transition-all duration-300"
               onClick={() => {
                 if (typeof window !== 'undefined' && window.dataLayer) {
                   window.dataLayer.push({
@@ -102,44 +105,73 @@ export default function Hero() {
                 }
               }}
             >
-              <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-              30-sekundni demo
+              <Play className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
+              Gledajte Live Demo
             </Button>
           </div>
 
-          {/* Social Proof */}
+          {/* FOMO Section */}
+          <div className="mb-12 p-6 bg-accent/10 border border-accent/30 rounded-2xl backdrop-blur-sm max-w-md mx-auto">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <Clock className="w-5 h-5 text-accent" />
+              <span className="text-accent font-semibold">Ograničena ponuda!</span>
+            </div>
+            <p className="text-foreground/80 text-center">
+              <span className="font-bold text-accent">5 besplatnih aplikacija</span> za nove korisnike koji se registriraju danas
+            </p>
+            <div className="w-full bg-muted/30 rounded-full h-2 mt-3">
+              <div className="bg-accent h-2 rounded-full w-3/4 animate-pulse"></div>
+            </div>
+            <p className="text-xs text-foreground/60 text-center mt-1">Ostalo: 127 mjesta</p>
+          </div>
+
+          {/* Enhanced Social Proof */}
           <div className="mb-12 text-center">
-            <p className="text-sm text-foreground/60 mb-4">Povjerenje stotina klijenata</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 text-foreground/70">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-sm">500+ uspješnih projekata</span>
+            <p className="text-sm text-foreground/60 mb-6">Već nam vjeruje više od 2,500 developera i startup-ova</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              <div className="flex items-center justify-center gap-3 p-4 bg-card/30 rounded-xl border border-primary/20 backdrop-blur-sm">
+                <Users className="w-5 h-5 text-primary" />
+                <div>
+                  <div className="text-2xl font-bold text-primary">2,500+</div>
+                  <div className="text-xs text-foreground/60">Aktivnih korisnika</div>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <span className="text-sm">Prosječno 90% brži razvoj</span>
+              <div className="flex items-center justify-center gap-3 p-4 bg-card/30 rounded-xl border border-secondary/20 backdrop-blur-sm">
+                <Clock className="w-5 h-5 text-secondary" />
+                <div>
+                  <div className="text-2xl font-bold text-secondary">12min</div>
+                  <div className="text-xs text-foreground/60">Prosječno vrijeme</div>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                <span className="text-sm">24/7 AI podrška</span>
+              <div className="flex items-center justify-center gap-3 p-4 bg-card/30 rounded-xl border border-accent/20 backdrop-blur-sm">
+                <TrendingUp className="w-5 h-5 text-accent" />
+                <div>
+                  <div className="text-2xl font-bold text-accent">500%</div>
+                  <div className="text-xs text-foreground/60">ROI povećanje</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Testimonial quotes */}
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div className="bg-card/20 p-4 rounded-xl border border-primary/20 backdrop-blur-sm">
+                <p className="text-sm text-foreground/80 italic mb-2">
+                  "Hebbera je zamijenila naš dev tim od 4 tjedna posla u 2 dana. Nevjerojatno!"
+                </p>
+                <p className="text-xs text-primary font-semibold">— Marko P., CEO TechStart</p>
+              </div>
+              <div className="bg-card/20 p-4 rounded-xl border border-secondary/20 backdrop-blur-sm">
+                <p className="text-sm text-foreground/80 italic mb-2">
+                  "Iz ideje do live aplikacije za 12 minuta. Mislila sam da se šale."
+                </p>
+                <p className="text-xs text-secondary font-semibold">— Ana K., Startup Founder</p>
               </div>
             </div>
           </div>
 
-          {/* Key Statistics */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-foreground">
-            <div className="text-center p-6 bg-white/5 rounded-lg backdrop-blur-sm">
-              <div className="text-4xl font-bold text-primary mb-2">500+</div>
-              <div className="text-foreground/70 text-base">Završenih projekata</div>
-            </div>
-            <div className="text-center p-6 bg-white/5 rounded-lg backdrop-blur-sm">
-              <div className="text-4xl font-bold text-secondary mb-2">12min</div>
-              <div className="text-foreground/70 text-base">Prosječno vrijeme izrade</div>
-            </div>
-            <div className="text-center p-6 bg-white/5 rounded-lg backdrop-blur-sm">
-              <div className="text-4xl font-bold text-accent mb-2">100%</div>
-              <div className="text-foreground/70 text-base">Zadovoljstvo klijenata</div>
-            </div>
+          {/* Interactive Demo Section */}
+          <div className="mt-16">
+            <InteractiveDemo />
           </div>
         </div>
       </div>

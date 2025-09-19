@@ -1,6 +1,9 @@
 import { ThemeProvider } from '@/components/ThemeProvider';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import VisualSteps from '@/components/VisualSteps';
+import CodeShowcase from '@/components/CodeShowcase';
+import SocialProof from '@/components/SocialProof';
 import Services from '@/components/Services';
 import About from '@/components/About';
 import Portfolio from '@/components/Portfolio';
@@ -14,6 +17,9 @@ const Index = () => {
         <Header />
         <main>
           <Hero />
+          <VisualSteps />
+          <CodeShowcase />
+          <SocialProof />
           <Services />
           <About />
           <Portfolio />
