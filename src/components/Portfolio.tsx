@@ -6,60 +6,60 @@ import { Badge } from '@/components/ui/badge';
 export default function Portfolio() {
   const projects = [
     {
-      title: "Restaurant Dubrovnik",
+      title: "Restoran Dubrovnik",
       category: "Web Development",
-      description: "Moderna web stranica za restoran s online rezervacijama i jelovnikom.",
+      description: "Moderna web stranica za restoran s online rezervacijama i digitalnim jelovnikom. Povećanje rezervacija za 250%.",
       image: "photo-1498050108023-c5249f4df085", // MacBook with code
       tags: ["React", "Node.js", "MongoDB"],
       type: "website",
-      stats: { traffic: "+250%", conversions: "+180%" }
+      stats: { rezervacije: "+250%", promet: "+180%" }
     },
     {
       title: "Fitness Centar Split",
       category: "Digital Marketing",
-      description: "Kampanja digitalnog oglašavanja koja je povećala članstvo za 300%.",
+      description: "Kompletna digitalna kampanja koja je povećala članstvo za 300% u 3 mjeseca.",
       image: "photo-1487058792275-0ad4aaf24ca7", // Code on monitor
       tags: ["Google Ads", "Facebook Ads", "Analytics"],
       type: "marketing",
-      stats: { members: "+300%", cost: "-45%" }
+      stats: { članovi: "+300%", troškovi: "-45%" }
     },
     {
       title: "Hotel Adriatic",
-      category: "Full Service",
-      description: "Kompletno digitalno rješenje - web stranica + booking sistem + SEO.",
+      category: "Kompletno Rješenje",
+      description: "Kompletno digitalno rješenje - web stranica + booking sistem + SEO + digitalno oglašavanje.",
       image: "photo-1461749280684-dccba630e2f6", // Programming monitor
       tags: ["WordPress", "SEO", "Booking System"],
       type: "complete",
-      stats: { bookings: "+400%", revenue: "+320%" }
+      stats: { rezervacije: "+400%", prihod: "+320%" }
     },
     {
-      title: "Tech Startup Zagreb",
+      title: "Beauty Salon Beograd",
       category: "UI/UX Design",
-      description: "Dizajn i razvoj SaaS platforme za upravljanje projektima.",
+      description: "Moderna web stranica s online booking sistemom za beauty salon. Elegantno i funkcionalno.",
       image: "photo-1488590528505-98d2b5aba04b", // Laptop
-      tags: ["React", "TypeScript", "PostgreSQL"],
-      type: "saas",
-      stats: { users: "10K+", retention: "95%" }
+      tags: ["WordPress", "Booking", "SEO"],
+      type: "beauty",
+      stats: { termini: "+280%", klijenti: "+150%" }
     }
   ];
 
   const testimonials = [
     {
       name: "Marko Petrović",
-      company: "Restaurant Dubrovnik",
-      text: "Hebbera Design je transformirala naš biznis. Nova web stranica i digitalne kampanje povećale su naše rezervacije za 250%.",
+      company: "Restoran Dubrovnik",
+      text: "Hebbera Design je potpuno transformirala naš restoran. Nova web stranica i digitalne kampanje povećale su rezervacije za 250%. Konačno imamo sustav koji radi!",
       rating: 5
     },
     {
       name: "Ana Kovač",
       company: "Fitness Centar Split",
-      text: "Profesionalan pristup i izuzetni rezultati. Preporučujem svima koji žele ozbiljno digitalno prisustvo.",
+      text: "Nevjerojatni rezultati! Za 3 mjeseca smo udvostručili broj članova. Tim Hebbera Design razumije naše tržište i zna kako privući lokalne klijente.",
       rating: 5
     },
     {
       name: "Tomislav Jurić",
       company: "Hotel Adriatic",
-      text: "Tim Hebbera Design razumije naše potrebe i uvijek isporuči više nego što očekujemo. Odličan ROI!",
+      text: "Booking sistem koji su nam napravili je genijalan! Gosti mogu rezervirati sobe 24/7, a mi imamo potpunu kontrolu. Prihodi su porasli za 320%!",
       rating: 5
     }
   ];
@@ -80,10 +80,10 @@ export default function Portfolio() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-foreground mb-6">
-            Naš <span className="text-gradient">portfolio</span>
+            Naši <span className="text-gradient">uspješni projekti</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Pogledajte neke od naših najuspješnijih projekata i rezultate koje smo postigli za naše klijente
+            Pogledajte neke od naših najuspješnijih projekata i rezultate koje smo postigli za klijente iz cijelog Balkana
           </p>
         </div>
 
@@ -145,7 +145,7 @@ export default function Portfolio() {
         {/* Testimonials */}
         <div className="text-center mb-12">
           <h3 className="text-3xl font-playfair font-bold text-foreground mb-8">
-            Što kažu naši klijenti
+            Što kažu naši zadovoljni klijenti
           </h3>
         </div>
 

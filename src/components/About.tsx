@@ -32,14 +32,14 @@ export default function About() {
 
   const stats = [
     { 
-      number: "150+", 
+      number: "500+", 
       label: "Zadovoljnih klijenata", 
       icon: <Heart className="h-6 w-6" />,
       gradient: "gradient-primary" 
     },
     { 
-      number: "200+", 
-      label: "Uspješnih projekata", 
+      number: "5+", 
+      label: "Godina iskustva", 
       icon: <Rocket className="h-6 w-6" />,
       gradient: "gradient-secondary" 
     },
@@ -50,8 +50,8 @@ export default function About() {
       gradient: "gradient-accent" 
     },
     { 
-      number: "24/7", 
-      label: "Podrška klijentima", 
+      number: "7-14", 
+      label: "Dana realizacije", 
       icon: <Trophy className="h-6 w-6" />,
       gradient: "gradient-tertiary" 
     }
@@ -79,24 +79,24 @@ export default function About() {
               </div>
 
               <h2 className="text-5xl sm:text-6xl lg:text-7xl font-playfair font-bold text-foreground mb-8 leading-tight">
-                Digitalni <span className="text-gradient bg-gradient-rainbow bg-clip-text text-transparent animate-gradient-x">kreatori</span> budućnosti
+                Balkanski <span className="text-gradient bg-gradient-rainbow bg-clip-text text-transparent animate-gradient-x">web dizajn</span> lideri
               </h2>
               
               <p className="text-2xl text-foreground/90 leading-relaxed mb-8 font-light">
-                <span className="text-primary font-bold">Hebbera Design</span> je digitalna agencija koja pomaže biznesima u 
-                <span className="text-secondary font-bold"> Balkanskom regionu</span> da se istaknu u digitalnom svijetu. 
-                Sa više od <span className="text-accent font-bold">5 godina iskustva</span>, kreirali smo preko 
-                <span className="text-tertiary font-bold"> 200 uspješnih projekata</span>.
+                <span className="text-primary font-bold">Hebbera Design</span> je vodeći web dizajn studio specijaliziran za 
+                <span className="text-secondary font-bold">Hrvatsko, Srpsko, Bosansko, Crnogorsko i Slovensko tržište</span>. 
+                Sa više od <span className="text-accent font-bold">5 godina iskustva</span>, realizirali smo preko 
+                <span className="text-tertiary font-bold">500 uspješnih projekata</span>.
               </p>
               
               <p className="text-xl text-foreground/80 leading-relaxed mb-10">
-                Naša misija je jednostavna: pomoći vašem biznisu da postigne online uspjeh kroz 
-                <span className="text-electric"> inovativne web stranice</span>, efikasno digitalno oglašavanje i strategije koje 
-                <span className="text-neon"> povećavaju vidljivost na internetu</span>.
+                Razumijemo <span className="text-electric font-bold">mentalitet, kulturu i potrebe Balkanskih kupaca</span>. 
+                Kreiramo web stranice koje <span className="text-neon font-bold">govore vašim klijentima na njihovom jeziku</span> 
+                i povećavaju prodaju za 200-400%.
               </p>
 
               <Button className="btn-hero group">
-                Započnimo saradnju
+                🎯 Zatražite Besplatnu Konzultaciju
                 <Rocket className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>

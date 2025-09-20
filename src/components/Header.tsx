@@ -29,20 +29,21 @@ export default function Header() {
   }, {
     href: '#about',
     label: 'O nama'
-  }, {
+            <div className="relative transform hover:scale-110 transition-all duration-500">
     href: '#portfolio',
     label: 'Portfolio'
   }, {
-    href: '#contact',
+                className="h-20 w-20 sm:h-24 sm:w-24 hover:scale-125 transition-all duration-500 drop-shadow-2xl group-hover:rotate-12 filter brightness-125 contrast-125" 
     label: 'Kontakt'
-  }];
+              <div className="absolute inset-0 bg-gradient-primary rounded-full opacity-0 group-hover:opacity-30 transition-opacity duration-300 blur-xl animate-pulse"></div>
+              <div className="absolute -inset-2 bg-gradient-rainbow rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-2xl"></div>
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border/20 shadow-soft' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24 max-w-7xl mx-auto">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img src={logo} alt="Hebbera Design Logo" className="h-12 w-12 sm:h-14 sm:w-14 hover:scale-110 transition-all duration-300" />
-            <span className="text-2xl font-playfair font-bold text-gradient">
+              <span className="text-sm text-foreground/80 font-bold tracking-wider bg-gradient-primary bg-clip-text text-transparent">
+                🏆 #1 BALKANSKI WEB STUDIO
               Hebbera Design
             </span>
           </div>
@@ -57,13 +58,13 @@ export default function Header() {
 
           {/* Theme Toggle & Mobile Menu */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon" onClick={toggleTheme} className="hover:bg-muted transition-colors">
+            <div className="flex items-center space-x-2 text-foreground/80 hover:text-primary transition-colors hover:scale-105 duration-300">
               {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
-            </Button>
+              <span className="font-semibold">📞 +385 91 234 5678</span>
 
-            {/* Mobile Menu Button */}
+              🎯 Besplatna Konzultacija
             <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              <span className="font-semibold">✉️ info@hebberadesign.com</span>
             </Button>
           </div>
         </div>

@@ -8,73 +8,85 @@ import onlineVisibilityImg from '@/assets/online-visibility.jpg';
 export default function Services() {
   const services = [
     {
-      icon: <Code className="h-10 w-10" />,
-      title: "Web Development",
-      subtitle: "Moderne i responzivne web stranice",
-      description: "Kreiramo brze, sigurne i SEO optimizirane web stranice koje odlično rade na svim uređajima. Od jednostavnih poslovnih stranica do složenih web aplikacija.",
+      icon: <Code className="h-12 w-12" />,
+      title: "Profesionalni Web Dizajn",
+      subtitle: "Moderni sajtovi koji prodaju 24/7",
+      description: "Kreiramo brze, sigurne i SEO optimizirane web stranice koje odlično rade na svim uređajima. Specijalizirani za Balkan tržište s razumijevanjem lokalne kulture i potreba.",
       image: webDevImg,
-      features: ["Responzivni dizajn", "SEO optimizacija", "Brzo učitavanje", "Sigurnost"],
+      features: ["Responzivni dizajn", "SEO optimizacija", "Brzo učitavanje", "Sigurnost", "Lokalizacija"],
       gradient: "from-primary via-primary-glow to-secondary",
-      shadowColor: "shadow-intense"
+      shadowColor: "shadow-intense",
+      price: "Od 1.500€",
+      duration: "7-14 dana"
     },
     {
-      icon: <Megaphone className="h-10 w-10" />,
-      title: "Digitalno oglašavanje",
-      subtitle: "Ciljanost koja donosi rezultate",
-      description: "Pokretamo uspješne kampanje na Google Ads, Facebook, Instagram i drugim platformama. Svaki euro uložen u oglašavanje mora donijeti povrat.",
+      icon: <Megaphone className="h-12 w-12" />,
+      title: "Digitalno Oglašavanje",
+      subtitle: "Kampanje koje donose rezultate",
+      description: "Pokretamo uspješne kampanje na Google Ads, Facebook, Instagram i drugim platformama. Fokus na Balkan tržište s poznavanjem lokalnih navika i jezika.",
       image: digitalMarketingImg,
-      features: ["Google Ads", "Social Media kampanje", "Analitika", "ROI optimizacija"],
+      features: ["Google Ads", "Facebook/Instagram", "Analitika", "ROI optimizacija", "Lokalno ciljanje"],
       gradient: "from-accent via-accent-glow to-tertiary",
-      shadowColor: "shadow-neon"
+      shadowColor: "shadow-neon",
+      price: "Od 500€/mjesec",
+      duration: "Rezultati za 7 dana"
     },
     {
-      icon: <TrendingUp className="h-10 w-10" />,
+      icon: <TrendingUp className="h-12 w-12" />,
       title: "Online vidljivost",
-      subtitle: "Budite pronađeni na internetu",
-      description: "Pomažemo vašem biznisu da postane vidljiv online kroz strategije SEO-a, lokalnog pretraživanja i izgradnje digitalnog prisustva.",
+      subtitle: "Budite #1 na Google pretragama",
+      description: "Pomažemo vašem biznisu da postane vidljiv online kroz strategije SEO-a, lokalnog pretraživanja i izgradnje digitalnog prisustva na Balkanu.",
       image: onlineVisibilityImg,
-      features: ["SEO optimizacija", "Google My Business", "Lokalno pretraživanje", "Branding"],
+      features: ["SEO optimizacija", "Google My Business", "Lokalno pretraživanje", "Branding", "Društvene mreže"],
       gradient: "from-secondary via-secondary-glow to-primary",
-      shadowColor: "shadow-glow"
+      shadowColor: "shadow-glow",
+      price: "Od 300€/mjesec",
+      duration: "Rezultati za 30 dana"
     }
   ];
 
   const additionalServices = [
     {
       icon: <Palette className="h-8 w-8" />,
-      title: "UI/UX Dizajn",
-      description: "Kreiramo korisničke doživljave koji oduševljavaju i konvertiraju posetioce u kupce.",
-      gradient: "gradient-primary"
+      title: "Branding & Identitet",
+      description: "Kreiramo jedinstvene vizualne identitete koji odražavaju vrijednosti vašeg brenda na Balkanskom tržištu.",
+      gradient: "gradient-primary",
+      price: "Od 800€"
     },
     {
       icon: <Search className="h-8 w-8" />,
       title: "SEO Optimizacija", 
-      description: "Poboljšavamo rangiranje vaše web stranice na Google pretragama i povećavamo organicki promet.",
-      gradient: "gradient-secondary"
+      description: "Poboljšavamo rangiranje vaše web stranice na Google pretragama za ključne riječi relevantne za Balkan.",
+      gradient: "gradient-secondary",
+      price: "Od 400€/mjesec"
     },
     {
       icon: <Globe className="h-8 w-8" />,
-      title: "E-commerce rješenja",
-      description: "Svilamo online prodavnice koje generiraju prodaju 24/7 i olakšavaju upravljanje inventarom.",
-      gradient: "gradient-accent"
+      title: "E-commerce Rješenja",
+      description: "Razvijamo online trgovine prilagođene Balkanskim kupcima s lokalnim načinima plaćanja.",
+      gradient: "gradient-accent",
+      price: "Od 2.500€"
     },
     {
       icon: <Rocket className="h-8 w-8" />,
-      title: "Digitalna strategija",
-      description: "Razvijamo sveobuhvatne digitalne strategije za maksimalan online uspjeh.",
-      gradient: "gradient-tertiary"
+      title: "Digitalna Strategija",
+      description: "Razvijamo sveobuhvatne digitalne strategije za maksimalan uspjeh na Balkanskom tržištu.",
+      gradient: "gradient-tertiary",
+      price: "Od 1.000€"
     },
     {
       icon: <Target className="h-8 w-8" />,
-      title: "Conversion optimizacija",
-      description: "Optimiziramo vaše stranice za bolje konverzije i veći povrat na investiciju.",
-      gradient: "gradient-neon"
+      title: "Conversion Optimizacija",
+      description: "Optimiziramo vaše stranice za bolje konverzije s fokusom na Balkanske kupce.",
+      gradient: "gradient-neon",
+      price: "Od 600€/mjesec"
     },
     {
       icon: <Zap className="h-8 w-8" />,
-      title: "Performance marketing",
-      description: "Fokusirano oglašavanje s mjerljivim rezultatima i garantiranim povratom.",
-      gradient: "gradient-rainbow"
+      title: "Maintenance & Podrška",
+      description: "24/7 tehnička podrška i redovito ažuriranje vaših digitalnih rješenja.",
+      gradient: "gradient-rainbow",
+      price: "Od 200€/mjesec"
     }
   ];
 
@@ -91,17 +103,17 @@ export default function Services() {
         <div className="text-center mb-20">
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-            <span className="text-primary font-semibold text-lg uppercase tracking-wider">Usluge</span>
+            <span className="text-primary font-semibold text-lg uppercase tracking-wider">Naše Usluge</span>
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
           </div>
           
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-playfair font-bold text-foreground mb-8 leading-tight">
-            Naše <span className="text-gradient bg-gradient-rainbow bg-clip-text text-transparent animate-gradient-x">revolucionarne</span> usluge
+            Digitalna Rješenja za <span className="text-gradient bg-gradient-rainbow bg-clip-text text-transparent animate-gradient-x">Balkan</span>
           </h2>
           
           <p className="text-2xl text-foreground/80 max-w-4xl mx-auto leading-relaxed font-light">
-            Pružamo <span className="text-primary font-bold">kompletna digitalna rješenja</span> koja će vašem biznisu omogućiti da se 
-            <span className="text-electric"> istakne u digitalnom svijetu</span>
+            Specijalizirani smo za <span className="text-primary font-bold">Hrvatsko, Srpsko, Bosansko, Crnogorsko i Slovensko tržište</span>. 
+            Razumijemo vašu kulturu, jezik i <span className="text-electric">potrebe lokalnih kupaca</span>.
           </p>
         </div>
 
@@ -121,6 +133,14 @@ export default function Services() {
                 {/* Floating Icon */}
                 <div className="absolute top-6 left-6 text-white p-4 bg-card/20 backdrop-blur-xl rounded-2xl border border-white/20 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
+                </div>
+
+                {/* Price & Duration */}
+                <div className="absolute top-6 right-6 text-right">
+                  <div className="bg-card/80 backdrop-blur-sm rounded-xl p-3 border border-primary/20">
+                    <div className="text-primary font-bold text-lg">{service.price}</div>
+                    <div className="text-foreground/70 text-sm">{service.duration}</div>
+                  </div>
                 </div>
 
                 {/* Animated Corner Elements */}
@@ -143,14 +163,14 @@ export default function Services() {
                 <div className="grid grid-cols-2 gap-3">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center text-sm text-foreground/80 group-hover:text-foreground transition-colors">
-                      <div className="w-3 h-3 bg-gradient-primary rounded-full mr-3 animate-pulse"></div>
+                      <CheckCircle className="w-4 h-4 text-primary mr-2" />
                       {feature}
                     </div>
                   ))}
                 </div>
 
-                <Button className="btn-glass w-full mt-6 group-hover:scale-105 transition-transform">
-                  Saznajte više
+                <Button className="btn-cta-primary w-full mt-6 group-hover:scale-105 transition-transform">
+                  🎯 Zatražite Ponudu
                 </Button>
               </CardContent>
             </Card>
@@ -176,6 +196,11 @@ export default function Services() {
                 <p className="text-foreground/70 leading-relaxed group-hover:text-foreground/90 transition-colors">
                   {service.description}
                 </p>
+                
+                {/* Price */}
+                <div className="mt-4 text-center">
+                  <span className="text-primary font-bold text-lg">{service.price}</span>
+                </div>
 
                 {/* Decorative Elements */}
                 <div className="absolute top-4 right-4 w-2 h-2 bg-primary/40 rounded-full group-hover:bg-primary group-hover:scale-150 transition-all duration-300"></div>
@@ -190,14 +215,13 @@ export default function Services() {
           <Card className="card-premium p-12 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
             <div className="relative z-10">
-              <h3 className="text-3xl font-playfair font-bold mb-6 text-foreground">
-                Spremni za <span className="text-gradient bg-gradient-rainbow bg-clip-text text-transparent">digitalnu revoluciju</span>?
-              </h3>
-              <p className="text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
-                Kontaktirajte nas danas i saznajte kako možemo transformirati vaš biznis
-              </p>
-              <Button className="btn-hero">
-                Započnimo zajedno
+                <Button className="btn-cta-primary text-xl px-8 py-4">
+                  🎯 BESPLATNA KONZULTACIJA
+                  <Target className="ml-3 h-6 w-6" />
+                Kontaktirajte nas danas za <span className="text-electric font-bold">BESPLATNU konzultaciju</span> i saznajte kako možemo 
+                <span className="text-accent font-bold"> udvostručiti vašu online prodaju</span> u sljedećih 30 dana.
+                <Button className="btn-glass text-lg px-6 py-4">
+                  📱 Pozovite: +385 91 234 5678
                 <Rocket className="ml-3 h-5 w-5" />
               </Button>
             </div>

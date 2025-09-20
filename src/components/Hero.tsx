@@ -1,9 +1,8 @@
-import { ArrowRight, Play, Sparkle, Zap, Clock, Users, TrendingUp } from 'lucide-react';
+import { ArrowRight, Play, Sparkle, Zap, Clock, Users, TrendingUp, Star, CheckCircle, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroBg from '@/assets/hebbera-workspace.jpg';
 import React from 'react';
 import ScrollAnimation from '@/components/ScrollAnimations';
-import VideoShowcase from './VideoShowcase';
 
 // Declare global dataLayer type
 declare global {
@@ -61,23 +60,44 @@ export default function Hero() {
             <Zap className="absolute -top-2 -right-12 w-8 h-8 text-accent-glow animate-bounce" />
           </div>
           
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-playfair font-bold text-foreground mb-6 leading-tight">
-            <span className="block text-primary text-shadow-glow">Prestanite Gubiti Vrijeme na Kod.</span>
-            <span className="block text-2xl sm:text-3xl lg:text-4xl font-inter font-light text-foreground/90 mt-2">
-              Izgradite Stundensku Web Stranicu 20x Brže s Hebbera Design
+          {/* Compelling Headline & Subheadline */}
+          <h1 className="text-4xl sm:text-6xl lg:text-8xl font-playfair font-bold text-foreground mb-8 leading-tight">
+            <span className="block text-gradient bg-gradient-rainbow bg-clip-text text-transparent animate-gradient-x text-shadow-glow">
+              Učinimo Vas Vidljivim na Internetu
+            </span>
+            <span className="block text-2xl sm:text-4xl lg:text-5xl font-inter font-light text-foreground/90 mt-4">
+              za <span className="text-accent font-bold">10x Manje Vremena i Troškova</span>
             </span>
           </h1>
           
-          <p className="text-lg sm:text-xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed font-inter">
-            <span className="text-accent font-bold text-2xl block mb-2">Profesionalni Web Dizajn → Moderne Tehnologije → Kompletno Rješenje</span>
-            Naša AI platforma vam omogućuje stvaranje profesionalnih web stranica i aplikacija bez tehničkih znanja. 
-            Od početnog koncepta do konačne implementacije.
-            <span className="text-primary font-semibold"> Rezultati vidljivi već u prvom tjednu!</span>
-          </p>
+          {/* Enhanced Value Proposition */}
+          <div className="mb-10 max-w-4xl mx-auto">
+            <p className="text-xl sm:text-2xl text-foreground/90 mb-6 leading-relaxed font-inter">
+              <span className="text-primary font-bold text-3xl block mb-4">🚀 Hebbera Design - #1 Balkanski Web Dizajn Studio</span>
+              Kreiramo <span className="text-electric font-bold">web stranice koje prodaju 24/7</span> i povećavaju vašu online vidljivost za <span className="text-accent font-bold">300%</span>. 
+              Specijalizirani smo za Balkan tržište - <span className="text-secondary font-bold">razumijemo vašu kulturu, jezik i potrebe</span>.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="flex items-center justify-center gap-3 p-4 bg-card/30 rounded-2xl border border-primary/30 backdrop-blur-sm hover:scale-105 transition-all duration-300">
+                <CheckCircle className="w-6 h-6 text-primary" />
+                <span className="text-foreground font-semibold">Rezultati za 7-14 dana</span>
+              </div>
+              <div className="flex items-center justify-center gap-3 p-4 bg-card/30 rounded-2xl border border-secondary/30 backdrop-blur-sm hover:scale-105 transition-all duration-300">
+                <Star className="w-6 h-6 text-secondary" />
+                <span className="text-foreground font-semibold">500+ Zadovoljnih klijenata</span>
+              </div>
+              <div className="flex items-center justify-center gap-3 p-4 bg-card/30 rounded-2xl border border-accent/30 backdrop-blur-sm hover:scale-105 transition-all duration-300">
+                <Globe className="w-6 h-6 text-accent" />
+                <span className="text-foreground font-semibold">Balkan eksperti</span>
+              </div>
+            </div>
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+          {/* Clear Call to Action */}
+          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-12">
             <Button 
-              className="btn-cta-primary group px-16 py-8 text-2xl font-bold relative overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse-glow"
+              className="btn-cta-primary group px-16 py-8 text-2xl font-bold relative overflow-hidden shadow-2xl transform hover:scale-110 transition-all duration-300 animate-pulse-glow rounded-3xl"
               onClick={() => {
                 if (typeof window !== 'undefined' && window.dataLayer) {
                   window.dataLayer.push({
@@ -89,14 +109,14 @@ export default function Hero() {
               }}
             >
               <span className="relative z-10 flex items-center">
-                POČNITE GRADITI SADA
-                <ArrowRight className="ml-3 h-8 w-8 group-hover:translate-x-2 transition-transform duration-300" />
+                🎯 BESPLATNA KONZULTACIJA
+                <ArrowRight className="ml-4 h-8 w-8 group-hover:translate-x-3 transition-transform duration-300" />
               </span>
-              <div className="absolute inset-0 bg-gradient-neon opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-neon opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
             </Button>
             
             <Button 
-              className="btn-glass group px-12 py-8 text-xl font-semibold transition-all duration-300"
+              className="btn-glass group px-12 py-8 text-xl font-semibold transition-all duration-300 rounded-3xl"
               onClick={() => {
                 if (typeof window !== 'undefined' && window.dataLayer) {
                   window.dataLayer.push({
@@ -107,73 +127,95 @@ export default function Hero() {
                 }
               }}
             >
-              <Play className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
-              Gledajte Live Demo
+              <Play className="mr-3 h-6 w-6 group-hover:scale-125 transition-transform duration-300" />
+              📱 Pogledajte Portfolio
             </Button>
           </div>
 
-          {/* FOMO Section */}
-          <div className="mb-12 p-6 bg-accent/10 border border-accent/30 rounded-2xl backdrop-blur-sm max-w-md mx-auto">
-            <div className="flex items-center justify-center gap-2 mb-2">
-              <Clock className="w-5 h-5 text-accent" />
-              <span className="text-accent font-semibold">Ograničena ponuda!</span>
+          {/* Enhanced FOMO Section */}
+          <div className="mb-12 p-8 bg-gradient-to-r from-accent/30 via-primary/30 to-secondary/30 border-2 border-accent/50 rounded-3xl backdrop-blur-sm max-w-3xl mx-auto hover:scale-105 transition-all duration-300 shadow-premium">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Clock className="w-8 h-8 text-accent animate-pulse" />
+              <span className="text-accent font-bold text-3xl">🔥 OGRANIČENA PONUDA - PROSINAC 2024!</span>
             </div>
-            <p className="text-foreground/80 text-center">
-              <span className="font-bold text-accent">Besplatna konzultacija + 50% popust</span> za projekte pokrenute ovaj mjesec
+            <p className="text-foreground/90 text-center text-xl mb-4">
+              <span className="font-bold text-accent text-3xl block mb-2">50% POPUST + Besplatno Hosting (1 godina)</span>
+              <span className="text-lg">za prva 5 klijenata koji pokrenu projekt do kraja godine</span>
             </p>
-            <div className="w-full bg-muted/30 rounded-full h-2 mt-3">
-              <div className="bg-accent h-2 rounded-full w-3/4 animate-pulse"></div>
+            <div className="w-full bg-muted/30 rounded-full h-4 mt-4 overflow-hidden">
+              <div className="bg-gradient-to-r from-accent to-primary h-4 rounded-full w-3/5 animate-pulse shadow-glow"></div>
             </div>
-            <p className="text-xs text-foreground/60 text-center mt-1">Ostalo: 127 mjesta</p>
+            <p className="text-sm text-foreground/70 text-center mt-2 font-semibold">
+              ⏰ Ostala samo 2 mjesta od 5! Ponuda vrijedi do 31.12.2024.
+            </p>
           </div>
 
           {/* Enhanced Social Proof */}
-          <div className="mb-12 text-center">
-            <p className="text-sm text-foreground/60 mb-6">Više od 500+ uspješno realiziranih projekata za klijente iz cijelog Balkana</p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div className="flex items-center justify-center gap-3 p-4 bg-card/30 rounded-xl border border-primary/20 backdrop-blur-sm">
-                <Users className="w-5 h-5 text-primary" />
-                <div>
-                  <div className="text-2xl font-bold text-primary">500+</div>
-                  <div className="text-xs text-foreground/60">Realiziranih projekata</div>
-                </div>
+          <div className="mb-16 text-center">
+            <p className="text-lg text-foreground/70 mb-8 font-semibold">
+              Više od <span className="text-primary font-bold">500+ uspješno realiziranih projekata</span> za klijente iz <span className="text-secondary font-bold">Hrvatske, Srbije, BiH, Crne Gore i Slovenije</span>
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+              <div className="card-premium p-8 group hover:scale-110 transition-all duration-500">
+                <Users className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-125 transition-transform duration-300" />
+                <div className="text-4xl font-bold text-primary mb-2 group-hover:text-primary-glow transition-colors">500+</div>
+                <div className="text-foreground/80 font-semibold">Realiziranih projekata</div>
               </div>
-              <div className="flex items-center justify-center gap-3 p-4 bg-card/30 rounded-xl border border-secondary/20 backdrop-blur-sm">
-                <Clock className="w-5 h-5 text-secondary" />
-                <div>
-                  <div className="text-2xl font-bold text-secondary">2 tjedna</div>
-                  <div className="text-xs text-foreground/60">Prosječna realizacija</div>
-                </div>
+              <div className="card-premium p-8 group hover:scale-110 transition-all duration-500">
+                <Clock className="w-12 h-12 text-secondary mx-auto mb-4 group-hover:scale-125 transition-transform duration-300" />
+                <div className="text-4xl font-bold text-secondary mb-2 group-hover:text-secondary-glow transition-colors">2 tjedna</div>
+                <div className="text-foreground/80 font-semibold">Prosječna realizacija</div>
               </div>
-              <div className="flex items-center justify-center gap-3 p-4 bg-card/30 rounded-xl border border-accent/20 backdrop-blur-sm">
-                <TrendingUp className="w-5 h-5 text-accent" />
-                <div>
-                  <div className="text-2xl font-bold text-accent">98%</div>
-                  <div className="text-xs text-foreground/60">Zadovoljnih klijenata</div>
-                </div>
+              <div className="card-premium p-8 group hover:scale-110 transition-all duration-500">
+                <TrendingUp className="w-12 h-12 text-accent mx-auto mb-4 group-hover:scale-125 transition-transform duration-300" />
+                <div className="text-4xl font-bold text-accent mb-2 group-hover:text-accent-glow transition-colors">98%</div>
+                <div className="text-foreground/80 font-semibold">Stopa zadovoljstva</div>
               </div>
             </div>
             
-            {/* Testimonial quotes */}
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <div className="bg-card/20 p-4 rounded-xl border border-primary/20 backdrop-blur-sm">
-                <p className="text-sm text-foreground/80 italic mb-2">
-                  "Hebbera Design je potpuno transformirala naš online biznis. Prodaja nam je porasla za 300%!"
+            {/* Premium testimonial cards */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              <div className="card-premium p-8 text-left hover:scale-105 transition-all duration-500">
+                <div className="flex items-center gap-2 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-lg text-foreground/90 italic mb-4 leading-relaxed">
+                  "Hebbera Design je potpuno transformirala naš online biznis. Prodaja nam je porasla za 280% u prva 3 mjeseca! Konačno imamo web stranicu koja radi za nas 24/7."
                 </p>
-                <p className="text-xs text-primary font-semibold">— Marko Petrović, CEO TechStart Zagreb</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
+                    MP
+                  </div>
+                  <div>
+                    <p className="text-primary font-bold text-lg">Marko Petrović</p>
+                    <p className="text-foreground/70">Vlasnik IT tvrtke, Zagreb</p>
+                  </div>
+                </div>
               </div>
-              <div className="bg-card/20 p-4 rounded-xl border border-secondary/20 backdrop-blur-sm">
-                <p className="text-sm text-foreground/80 italic mb-2">
-                  "Profesionalnost i brzina realizacije su mi omogućili da se fokusiram na svoje klijente."
+              
+              <div className="card-premium p-8 text-left hover:scale-105 transition-all duration-500">
+                <div className="flex items-center gap-2 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-lg text-foreground/90 italic mb-4 leading-relaxed">
+                  "Nevjerojatna profesionalnost! Za 10 dana sam dobila web stranicu koja izgleda bolje od konkurencije. Rezervacije su se udvostručile!"
                 </p>
-                <p className="text-xs text-secondary font-semibold">— Ana Kovačević, Vlasnica Beauty Salona</p>
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-secondary rounded-full flex items-center justify-center text-white font-bold text-xl">
+                    AK
+                  </div>
+                  <div>
+                    <p className="text-secondary font-bold text-lg">Ana Kovačević</p>
+                    <p className="text-foreground/70">Vlasnica wellness centra, Beograd</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* Video Showcase Section */}
-          <div className="mt-16">
-            <VideoShowcase />
           </div>
         </div>
       </div>

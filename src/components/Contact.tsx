@@ -81,10 +81,10 @@ export default function Contact() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-foreground mb-6">
-            Kontaktirajte <span className="text-gradient">nas</span>
+            Zatražite <span className="text-gradient">Besplatnu Konzultaciju</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Spremni smo razgovarati o vašem projektu. Pošaljite nam poruku i odgovorit ćemo u najkraćem roku.
+            Spremni smo razgovarati o vašem projektu. Pošaljite nam poruku i odgovorit ćemo u roku od 2 sata!
           </p>
         </div>
 
@@ -93,7 +93,7 @@ export default function Contact() {
           <div className="lg:col-span-2">
             <Card className="card-premium">
               <CardHeader>
-                <CardTitle className="text-2xl font-playfair">Pošaljite nam poruku</CardTitle>
+                <CardTitle className="text-2xl font-playfair">🎯 Besplatna Konzultacija - Vrijednost 500€</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -180,13 +180,13 @@ export default function Contact() {
                   <Button 
                     type="submit" 
                     disabled={isSubmitting}
-                    className="w-full btn-hero group"
+                    className="w-full btn-cta-primary group text-xl py-4"
                   >
                     {isSubmitting ? (
-                      <>Šalje se...</>
+                      <>📤 Šalje se...</>
                     ) : (
                       <>
-                        Pošaljite poruku
+                        🎯 Zatražite Besplatnu Konzultaciju
                         <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                       </>
                     )}
@@ -201,7 +201,7 @@ export default function Contact() {
             {/* Contact Information */}
             <Card className="card-glass">
               <CardHeader>
-                <CardTitle className="text-xl font-playfair">Kontakt informacije</CardTitle>
+                <CardTitle className="text-xl font-playfair">📞 Direktan kontakt</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 {contactInfo.map((info, index) => (
@@ -225,15 +225,15 @@ export default function Contact() {
             {/* Why Choose Us */}
             <Card className="card-premium">
               <CardHeader>
-                <CardTitle className="text-xl font-playfair">Zašto odabrati nas?</CardTitle>
+                <CardTitle className="text-xl font-playfair">🏆 Zašto smo #1 izbor?</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 {[
-                  "Besplatna konzultacija",
-                  "Iskustvo od 5+ godina",
-                  "150+ zadovoljnih klijenata",
+                  "Besplatna konzultacija (vrijednost 500€)",
+                  "5+ godina iskustva na Balkanu",
+                  "500+ zadovoljnih klijenata",
                   "24/7 podrška",
-                  "Garancija kvaliteta"
+                  "100% garancija zadovoljstva"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
@@ -245,9 +245,9 @@ export default function Contact() {
 
             {/* Response Time */}
             <div className="bg-gradient-primary rounded-xl p-6 text-white text-center">
-              <h3 className="text-lg font-playfair font-bold mb-2">Brz odgovor</h3>
-              <p className="text-white/90 mb-4">Odgovaramo na sve upite unutar 24 sata</p>
-              <div className="text-3xl font-bold">&lt; 24h</div>
+              <h3 className="text-lg font-playfair font-bold mb-2">⚡ Super brz odgovor</h3>
+              <p className="text-white/90 mb-4">Odgovaramo na sve upite u rekordnom vremenu</p>
+              <div className="text-3xl font-bold">< 2h</div>
             </div>
           </div>
         </div>
