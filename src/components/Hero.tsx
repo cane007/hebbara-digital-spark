@@ -1,8 +1,9 @@
 import { ArrowRight, Play, Sparkle, Zap, Clock, Users, TrendingUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroBg from '@/assets/hero-bg.jpg';
+import heroBg from '@/assets/hebbera-workspace.jpg';
 import React from 'react';
-import InteractiveDemo from './InteractiveDemo';
+import ScrollAnimation from '@/components/ScrollAnimations';
+import VideoShowcase from './VideoShowcase';
 
 // Declare global dataLayer type
 declare global {
@@ -60,17 +61,18 @@ export default function Hero() {
             <Zap className="absolute -top-2 -right-12 w-8 h-8 text-accent-glow animate-bounce" />
           </div>
           
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-playfair font-bold text-foreground mb-6 leading-tight">
-            <span className="block text-primary text-shadow-glow">Hebbera Design</span>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-playfair font-bold text-foreground mb-6 leading-tight">
+            <span className="block text-primary text-shadow-glow">Prestanite Gubiti Vrijeme na Kod.</span>
             <span className="block text-2xl sm:text-3xl lg:text-4xl font-inter font-light text-foreground/90 mt-2">
-              Vaša web aplikacija u samo 12 minuta
+              Izgradite Stundensku Web Stranicu 20x Brže s Hebbera Design
             </span>
           </h1>
           
           <p className="text-lg sm:text-xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed font-inter">
-            <span className="text-accent font-bold text-2xl block mb-2">Opišite ideju → AI kreira kod → Deploy u 1 kliku</span>
-            Bez programiranja, bez komplikacija. Samo recite našem AI što trebate i gledajte kako nastaje vaša aplikacija.
-            <span className="text-primary font-semibold"> Garantirano za 12 minuta ili besplatno!</span>
+            <span className="text-accent font-bold text-2xl block mb-2">Profesionalni Web Dizajn → Moderne Tehnologije → Kompletno Rješenje</span>
+            Naša AI platforma vam omogućuje stvaranje profesionalnih web stranica i aplikacija bez tehničkih znanja. 
+            Od početnog koncepta do konačne implementacije.
+            <span className="text-primary font-semibold"> Rezultati vidljivi već u prvom tjednu!</span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
@@ -87,7 +89,7 @@ export default function Hero() {
               }}
             >
               <span className="relative z-10 flex items-center">
-                STVORITE APLIKACIJU SADA
+                POČNITE GRADITI SADA
                 <ArrowRight className="ml-3 h-8 w-8 group-hover:translate-x-2 transition-transform duration-300" />
               </span>
               <div className="absolute inset-0 bg-gradient-neon opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
@@ -117,7 +119,7 @@ export default function Hero() {
               <span className="text-accent font-semibold">Ograničena ponuda!</span>
             </div>
             <p className="text-foreground/80 text-center">
-              <span className="font-bold text-accent">5 besplatnih aplikacija</span> za nove korisnike koji se registriraju danas
+              <span className="font-bold text-accent">Besplatna konzultacija + 50% popust</span> za projekte pokrenute ovaj mjesec
             </p>
             <div className="w-full bg-muted/30 rounded-full h-2 mt-3">
               <div className="bg-accent h-2 rounded-full w-3/4 animate-pulse"></div>
@@ -127,27 +129,27 @@ export default function Hero() {
 
           {/* Enhanced Social Proof */}
           <div className="mb-12 text-center">
-            <p className="text-sm text-foreground/60 mb-6">Već nam vjeruje više od 2,500 developera i startup-ova</p>
+            <p className="text-sm text-foreground/60 mb-6">Više od 500+ uspješno realiziranih projekata za klijente iz cijelog Balkana</p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
               <div className="flex items-center justify-center gap-3 p-4 bg-card/30 rounded-xl border border-primary/20 backdrop-blur-sm">
                 <Users className="w-5 h-5 text-primary" />
                 <div>
-                  <div className="text-2xl font-bold text-primary">2,500+</div>
-                  <div className="text-xs text-foreground/60">Aktivnih korisnika</div>
+                  <div className="text-2xl font-bold text-primary">500+</div>
+                  <div className="text-xs text-foreground/60">Realiziranih projekata</div>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-3 p-4 bg-card/30 rounded-xl border border-secondary/20 backdrop-blur-sm">
                 <Clock className="w-5 h-5 text-secondary" />
                 <div>
-                  <div className="text-2xl font-bold text-secondary">12min</div>
-                  <div className="text-xs text-foreground/60">Prosječno vrijeme</div>
+                  <div className="text-2xl font-bold text-secondary">2 tjedna</div>
+                  <div className="text-xs text-foreground/60">Prosječna realizacija</div>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-3 p-4 bg-card/30 rounded-xl border border-accent/20 backdrop-blur-sm">
                 <TrendingUp className="w-5 h-5 text-accent" />
                 <div>
-                  <div className="text-2xl font-bold text-accent">500%</div>
-                  <div className="text-xs text-foreground/60">ROI povećanje</div>
+                  <div className="text-2xl font-bold text-accent">98%</div>
+                  <div className="text-xs text-foreground/60">Zadovoljnih klijenata</div>
                 </div>
               </div>
             </div>
@@ -156,22 +158,22 @@ export default function Hero() {
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <div className="bg-card/20 p-4 rounded-xl border border-primary/20 backdrop-blur-sm">
                 <p className="text-sm text-foreground/80 italic mb-2">
-                  "Hebbera je zamijenila naš dev tim od 4 tjedna posla u 2 dana. Nevjerojatno!"
+                  "Hebbera Design je potpuno transformirala naš online biznis. Prodaja nam je porasla za 300%!"
                 </p>
-                <p className="text-xs text-primary font-semibold">— Marko P., CEO TechStart</p>
+                <p className="text-xs text-primary font-semibold">— Marko Petrović, CEO TechStart Zagreb</p>
               </div>
               <div className="bg-card/20 p-4 rounded-xl border border-secondary/20 backdrop-blur-sm">
                 <p className="text-sm text-foreground/80 italic mb-2">
-                  "Iz ideje do live aplikacije za 12 minuta. Mislila sam da se šale."
+                  "Profesionalnost i brzina realizacije su mi omogućili da se fokusiram na svoje klijente."
                 </p>
-                <p className="text-xs text-secondary font-semibold">— Ana K., Startup Founder</p>
+                <p className="text-xs text-secondary font-semibold">— Ana Kovačević, Vlasnica Beauty Salona</p>
               </div>
             </div>
           </div>
 
-          {/* Interactive Demo Section */}
+          {/* Video Showcase Section */}
           <div className="mt-16">
-            <InteractiveDemo />
+            <VideoShowcase />
           </div>
         </div>
       </div>
