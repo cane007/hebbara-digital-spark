@@ -37,6 +37,8 @@ export default function Header() {
     label: 'Kontakt'
               <div className="absolute inset-0 bg-gradient-primary rounded-full opacity-0 group-hover:opacity-30 transition-opacity duration-300 blur-xl animate-pulse"></div>
               <div className="absolute -inset-2 bg-gradient-rainbow rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-2xl"></div>
+  }
+  ]
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border/20 shadow-soft' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24 max-w-7xl mx-auto">
@@ -79,4 +81,5 @@ export default function Header() {
           </div>}
       </div>
     </header>;
+}
 }
