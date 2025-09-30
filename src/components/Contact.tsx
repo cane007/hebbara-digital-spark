@@ -30,11 +30,11 @@ export default function Contact() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-              Kontaktirajte Nas
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold text-foreground mb-4">
+              Započnimo Saradnju
             </h2>
-            <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
-              Spremni smo da transformišemo vaše digitalne vizije u stvarnost. Kontaktirajte nas za besplatnu konsultaciju.
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Besplatna konzultacija bez obaveze. Odgovorićemo u roku od 24 sata i pomoći vam da ostvarite vaše ciljeve.
             </p>
           </div>
 
@@ -42,8 +42,8 @@ export default function Contact() {
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
-                  <Phone className="h-6 w-6 text-white" />
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">Telefon</h3>
@@ -52,8 +52,8 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
-                  <Mail className="h-6 w-6 text-white" />
+                <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
+                  <Mail className="h-6 w-6 text-accent" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">Email</h3>
@@ -62,8 +62,8 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
-                  <MapPin className="h-6 w-6 text-white" />
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">Lokacija</h3>
@@ -111,10 +111,10 @@ export default function Contact() {
                   </div>
                   <Button 
                     type="submit" 
-                    className="w-full h-12 text-lg font-semibold bg-gradient-primary hover:opacity-90 transition-opacity"
+                    className="w-full h-12 text-lg font-semibold btn-primary"
                   >
                     <Send className="mr-2 h-5 w-5" />
-                    Pošaljite Poruku
+                    Zakažite Besplatnu Konzultaciju
                   </Button>
                 </form>
               </CardContent>

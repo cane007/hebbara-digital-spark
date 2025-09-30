@@ -24,7 +24,9 @@ export default function Header() {
   const navItems = [
     { href: '#home', label: 'Početna' },
     { href: '#services', label: 'Usluge' },
-    { href: '#portfolio', label: 'Portfolio' },
+    { href: '#process', label: 'Proces' },
+    { href: '#technologies', label: 'Tehnologije' },
+    { href: '#faq', label: 'FAQ' },
     { href: '#contact', label: 'Kontakt' }
   ];
 

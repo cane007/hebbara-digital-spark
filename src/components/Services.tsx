@@ -1,7 +1,33 @@
+import { useEffect, useRef } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Monitor, Smartphone, Search, Rocket } from 'lucide-react';
 
 export default function Services() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const cards = entry.target.querySelectorAll('.service-card');
+            cards.forEach((card, index) => {
+              setTimeout(() => {
+                card.classList.add('visible');
+              }, index * 100);
+            });
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
   const services = [
     {
       icon: Monitor,
@@ -30,7 +56,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="section-padding bg-muted/30">
+    <section ref={sectionRef} id="services" className="section-padding bg-muted/30">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-foreground mb-4">
@@ -43,7 +69,7 @@ export default function Services() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
-            <Card key={index} className="card-clean group hover:shadow-lg transition-all duration-300">
+            <Card key={index} className="service-card fade-in-up card-clean group hover:shadow-lg transition-all duration-300">
               <CardContent className="p-6">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <service.icon className="h-6 w-6 text-primary" />

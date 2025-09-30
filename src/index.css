@@ -7,8 +7,8 @@
 /* Clean Hebbera Design System */
 @layer base {
   :root {
-    /* Light Theme Colors */
-    --background: 0 0% 100%;
+    /* Light Theme Colors - Enhanced for Better Readability */
+    --background: 210 40% 98%;
     --foreground: 222.2 84% 4.9%;
     
     --card: 0 0% 100%;
@@ -21,8 +21,8 @@
     --primary: 221.2 83.2% 53.3%;
     --primary-foreground: 210 40% 98%;
     
-    /* Secondary - Clean Gray */
-    --secondary: 210 40% 96%;
+    /* Secondary - Soft Blue-Gray */
+    --secondary: 210 40% 94%;
     --secondary-foreground: 222.2 84% 4.9%;
     
     /* Accent - Success Green */
@@ -32,12 +32,12 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 214.3 31.8% 88%;
+    --input: 214.3 31.8% 88%;
     --ring: 221.2 83.2% 53.3%;
     
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 40% 94%;
+    --muted-foreground: 215.4 16.3% 42%;
     
     --radius: 0.5rem;
   }
@@ -94,20 +94,20 @@
 @layer components {
   /* Professional Button Styles */
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-medium transition-colors;
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-medium transition-all duration-300;
   }
   
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 px-6 py-3 rounded-lg font-medium transition-colors;
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 px-6 py-3 rounded-lg font-medium transition-all duration-300;
   }
   
   .btn-outline {
-    @apply border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-3 rounded-lg font-medium transition-colors;
+    @apply border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300;
   }
   
   /* Professional Card Styles */
   .card-clean {
-    @apply bg-card border border-border rounded-lg shadow-sm hover:shadow-md transition-shadow;
+    @apply bg-card border border-border rounded-lg shadow-sm hover:shadow-lg transition-all duration-300;
   }
   
   /* Section Spacing */
@@ -115,17 +115,46 @@
     @apply py-16 px-4 sm:px-6 lg:px-8;
   }
   
-  /* Simple Animations */
-  .fade-in {
-    @apply opacity-0 translate-y-4 transition-all duration-700;
+  /* Scroll Animations */
+  .fade-in-up {
+    @apply opacity-0 translate-y-8 transition-all duration-700;
   }
   
-  .fade-in.visible {
+  .fade-in-up.visible {
     @apply opacity-100 translate-y-0;
+  }
+  
+  .fade-in-left {
+    @apply opacity-0 -translate-x-8 transition-all duration-700;
+  }
+  
+  .fade-in-left.visible {
+    @apply opacity-100 translate-x-0;
+  }
+  
+  .fade-in-right {
+    @apply opacity-0 translate-x-8 transition-all duration-700;
+  }
+  
+  .fade-in-right.visible {
+    @apply opacity-100 translate-x-0;
+  }
+  
+  .scale-in {
+    @apply opacity-0 scale-95 transition-all duration-700;
+  }
+  
+  .scale-in.visible {
+    @apply opacity-100 scale-100;
   }
   
   /* Clean gradients */
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+  
+  /* Hover Effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
   }
 }
