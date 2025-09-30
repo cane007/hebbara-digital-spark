@@ -42,7 +42,7 @@ Hebbera Design je moderna digitalna agencija specijalizirana za web development,
 
 ```bash
 # 1. Kloniraj repozitorij
-git clone <repo-url>
+git clone <https://github.com/cane007/hebbara-digital-sparkl>
 cd hebbera-design
 
 # 2. Instaliraj dependencije
