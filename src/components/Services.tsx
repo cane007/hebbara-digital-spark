@@ -56,7 +56,7 @@ export default function Services() {
   ];
 
   return (
-    <section ref={sectionRef} id="services" className="section-padding bg-muted/30">
+    <section ref={sectionRef} id="services" className="section-padding bg-gradient-to-b from-white to-muted/50">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-foreground mb-4">
@@ -69,17 +69,17 @@ export default function Services() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
-            <Card key={index} className="service-card fade-in-up card-clean group hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <service.icon className="h-6 w-6 text-primary" />
+            <Card key={index} className="service-card fade-in-up card-clean group hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-2 hover:border-primary/30">
+              <CardContent className="p-7">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-lg">
+                  <service.icon className="h-7 w-7 text-white" />
                 </div>
                 
-                <h3 className="text-lg font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
                 
-                <p className="text-muted-foreground mb-4 text-sm">
+                <p className="text-muted-foreground mb-5 text-base leading-relaxed">
                   {service.description}
                 </p>
                 

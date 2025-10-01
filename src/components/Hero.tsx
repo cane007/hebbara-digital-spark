@@ -37,7 +37,7 @@ export default function Hero() {
   }, [displayText, isDeleting, currentPhraseIndex]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-secondary/20 to-primary/5 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/5 via-secondary/10 to-accent/5 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
@@ -47,9 +47,9 @@ export default function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6 animate-fade-in">
-            <Sparkles className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Novi pristup web dizajnu na Balkanu</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary/90 to-secondary/90 rounded-full mb-6 animate-fade-in shadow-lg">
+            <Sparkles className="h-4 w-4 text-white" />
+            <span className="text-sm font-semibold text-white">Novi pristup web dizajnu na Balkanu</span>
           </div>
           
           {/* Main Headline with Typewriter Effect */}
@@ -69,33 +69,33 @@ export default function Hero() {
           
           {/* Trust Signals */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
-            <div className="flex items-center justify-center gap-3 p-4 bg-card/80 backdrop-blur border border-border rounded-lg hover-lift">
-              <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                <Code className="h-5 w-5 text-primary" />
+            <div className="flex items-center justify-center gap-3 p-5 bg-white border-2 border-primary/20 rounded-xl hover-lift shadow-md hover:shadow-xl hover:border-primary/40 transition-all">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-xl flex items-center justify-center shadow-lg">
+                <Code className="h-6 w-6 text-white" />
               </div>
               <div className="text-left">
-                <p className="font-semibold text-foreground">Moderne Tehnologije</p>
-                <p className="text-xs text-muted-foreground">React, TypeScript, AI</p>
+                <p className="font-bold text-foreground">Moderne Tehnologije</p>
+                <p className="text-sm text-muted-foreground font-medium">React, TypeScript, AI</p>
               </div>
             </div>
             
-            <div className="flex items-center justify-center gap-3 p-4 bg-card/80 backdrop-blur border border-border rounded-lg hover-lift">
-              <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
-                <Zap className="h-5 w-5 text-accent" />
+            <div className="flex items-center justify-center gap-3 p-5 bg-white border-2 border-accent/20 rounded-xl hover-lift shadow-md hover:shadow-xl hover:border-accent/40 transition-all">
+              <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent/70 rounded-xl flex items-center justify-center shadow-lg">
+                <Zap className="h-6 w-6 text-white" />
               </div>
               <div className="text-left">
-                <p className="font-semibold text-foreground">Brza Isporuka</p>
-                <p className="text-xs text-muted-foreground">7-14 dana projekat</p>
+                <p className="font-bold text-foreground">Brza Isporuka</p>
+                <p className="text-sm text-muted-foreground font-medium">7-14 dana projekat</p>
               </div>
             </div>
             
-            <div className="flex items-center justify-center gap-3 p-4 bg-card/80 backdrop-blur border border-border rounded-lg hover-lift">
-              <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                <Sparkles className="h-5 w-5 text-primary" />
+            <div className="flex items-center justify-center gap-3 p-5 bg-white border-2 border-secondary/20 rounded-xl hover-lift shadow-md hover:shadow-xl hover:border-secondary/40 transition-all">
+              <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/70 rounded-xl flex items-center justify-center shadow-lg">
+                <Sparkles className="h-6 w-6 text-white" />
               </div>
               <div className="text-left">
-                <p className="font-semibold text-foreground">Lokalna Podrška</p>
-                <p className="text-xs text-muted-foreground">Balkan tržište</p>
+                <p className="font-bold text-foreground">Lokalna Podrška</p>
+                <p className="text-sm text-muted-foreground font-medium">Balkan tržište</p>
               </div>
             </div>
           </div>
@@ -104,7 +104,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
-              className="btn-primary text-lg px-8 py-6 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 group"
+              className="bg-gradient-to-r from-primary to-secondary text-white text-lg px-10 py-7 shadow-xl hover:shadow-2xl hover:scale-105 transition-all group font-bold"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Započnite Besplatnu Konzultaciju
@@ -113,7 +113,7 @@ export default function Hero() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="text-lg px-8 py-6 border-2"
+              className="text-lg px-10 py-7 border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold shadow-lg hover:shadow-xl transition-all"
               onClick={() => document.getElementById('process')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Saznajte Više o Nama
