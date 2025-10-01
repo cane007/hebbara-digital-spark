@@ -1,75 +1,60 @@
 import { useEffect, useRef } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Code2, Smartphone, Search, Shield, Zap, Globe } from 'lucide-react';
-
 export default function Technologies() {
   const sectionRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const cards = entry.target.querySelectorAll('.tech-card');
-            cards.forEach((card, index) => {
-              setTimeout(() => {
-                card.classList.add('visible');
-              }, index * 100);
-            });
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const cards = entry.target.querySelectorAll('.tech-card');
+          cards.forEach((card, index) => {
+            setTimeout(() => {
+              card.classList.add('visible');
+            }, index * 100);
+          });
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
     return () => observer.disconnect();
   }, []);
-
-  const technologies = [
-    {
-      icon: Code2,
-      title: 'React & TypeScript',
-      description: 'Koristimo najmoderniji frontend tehnologije za brze i pouzdane aplikacije.',
-      features: ['Komponente koje se mogu ponovo koristiti', 'Type safety', 'Izvrsne performanse']
-    },
-    {
-      icon: Smartphone,
-      title: 'Responsive Design',
-      description: 'Vaš sajt će savršeno izgledati na svim uređajima - od mobitela do desktop računara.',
-      features: ['Mobile-first pristup', 'Adaptive layout', 'Touch optimizacija']
-    },
-    {
-      icon: Search,
-      title: 'SEO Optimizacija',
-      description: 'Gradimo sajtove koje Google voli i koje vaši klijenti lako pronalaze.',
-      features: ['On-page SEO', 'Semantic HTML', 'Schema markup']
-    },
-    {
-      icon: Zap,
-      title: 'Brzina & Performanse',
-      description: 'Optimizujemo svaki aspekt kako bi vaš sajt učitavao bliskom brzinom.',
-      features: ['Lazy loading', 'Code splitting', 'Image optimization']
-    },
-    {
-      icon: Shield,
-      title: 'Sigurnost',
-      description: 'Implementiramo najbolje bezbjednosne prakse kako bi vaš sajt bio siguran.',
-      features: ['HTTPS', 'Data encryption', 'Regular updates']
-    },
-    {
-      icon: Globe,
-      title: 'Hosting & Deployment',
-      description: 'Brinemo se o hosting-u i redovnom održavanju vašeg sajta.',
-      features: ['CDN integracija', 'Auto backups', '99.9% uptime']
-    }
-  ];
-
-  return (
-    <section ref={sectionRef} id="technologies" className="section-padding bg-muted/30">
+  const technologies = [{
+    icon: Code2,
+    title: 'React & TypeScript',
+    description: 'Koristimo najmoderniji frontend tehnologije za brze i pouzdane aplikacije.',
+    features: ['Komponente koje se mogu ponovo koristiti', 'Type safety', 'Izvrsne performanse']
+  }, {
+    icon: Smartphone,
+    title: 'Responsive Design',
+    description: 'Vaš sajt će savršeno izgledati na svim uređajima - od mobitela do desktop računara.',
+    features: ['Mobile-first pristup', 'Adaptive layout', 'Touch optimizacija']
+  }, {
+    icon: Search,
+    title: 'SEO Optimizacija',
+    description: 'Gradimo sajtove koje Google voli i koje vaši klijenti lako pronalaze.',
+    features: ['On-page SEO', 'Semantic HTML', 'Schema markup']
+  }, {
+    icon: Zap,
+    title: 'Brzina & Performanse',
+    description: 'Optimizujemo svaki aspekt kako bi vaš sajt učitavao bliskom brzinom.',
+    features: ['Lazy loading', 'Code splitting', 'Image optimization']
+  }, {
+    icon: Shield,
+    title: 'Sigurnost',
+    description: 'Implementiramo najbolje bezbjednosne prakse kako bi vaš sajt bio siguran.',
+    features: ['HTTPS', 'Data encryption', 'Regular updates']
+  }, {
+    icon: Globe,
+    title: 'Hosting & Deployment',
+    description: 'Brinemo se o hosting-u i redovnom održavanju vašeg sajta.',
+    features: ['CDN integracija', 'Auto backups', '99.9% uptime']
+  }];
+  return <section ref={sectionRef} id="technologies" className="section-padding bg-slate-400">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full mb-4">
@@ -85,8 +70,7 @@ export default function Technologies() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {technologies.map((tech, index) => (
-            <Card key={index} className="tech-card scale-in card-clean group">
+          {technologies.map((tech, index) => <Card key={index} className="tech-card scale-in card-clean group">
               <CardContent className="p-6">
                 <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                   <tech.icon className="h-7 w-7 text-primary" />
@@ -101,16 +85,13 @@ export default function Technologies() {
                 </p>
                 
                 <ul className="space-y-2">
-                  {tech.features.map((feature, idx) => (
-                    <li key={idx} className="text-sm text-muted-foreground flex items-center gap-2">
+                  {tech.features.map((feature, idx) => <li key={idx} className="text-sm text-muted-foreground flex items-center gap-2">
                       <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
                       {feature}
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Bottom Stats */}
@@ -133,6 +114,5 @@ export default function Technologies() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }

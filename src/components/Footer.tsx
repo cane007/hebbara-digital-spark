@@ -1,37 +1,41 @@
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import logo from '@/assets/logo.png';
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
-  const services = [
-    "Web Development",
-    "Digitalno oglašavanje", 
-    "SEO optimizacija",
-    "UI/UX Dizajn",
-    "E-commerce rješenja",
-    "Online vidljivost"
-  ];
-
-  const quickLinks = [
-    { name: "Početna", href: "#home" },
-    { name: "Usluge", href: "#services" },
-    { name: "O nama", href: "#about" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Kontakt", href: "#contact" }
-  ];
-
-  const socialLinks = [
-    { icon: <Facebook className="h-5 w-5" />, href: "#", name: "Facebook" },
-    { icon: <Instagram className="h-5 w-5" />, href: "#", name: "Instagram" },
-    { icon: <Linkedin className="h-5 w-5" />, href: "#", name: "LinkedIn" }
-  ];
-
-  return (
-    <footer className="bg-gradient-dark text-white">
+  const services = ["Web Development", "Digitalno oglašavanje", "SEO optimizacija", "UI/UX Dizajn", "E-commerce rješenja", "Online vidljivost"];
+  const quickLinks = [{
+    name: "Početna",
+    href: "#home"
+  }, {
+    name: "Usluge",
+    href: "#services"
+  }, {
+    name: "O nama",
+    href: "#about"
+  }, {
+    name: "Portfolio",
+    href: "#portfolio"
+  }, {
+    name: "Kontakt",
+    href: "#contact"
+  }];
+  const socialLinks = [{
+    icon: <Facebook className="h-5 w-5" />,
+    href: "#",
+    name: "Facebook"
+  }, {
+    icon: <Instagram className="h-5 w-5" />,
+    href: "#",
+    name: "Instagram"
+  }, {
+    icon: <Linkedin className="h-5 w-5" />,
+    href: "#",
+    name: "LinkedIn"
+  }];
+  return <footer className="bg-gradient-dark text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 bg-slate-500">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
@@ -46,18 +50,11 @@ export default function Footer() {
               postane vidljiv na internetu.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="flex items-center justify-center w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg transition-colors group"
-                  aria-label={social.name}
-                >
+              {socialLinks.map((social, index) => <a key={index} href={social.href} className="flex items-center justify-center w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg transition-colors group" aria-label={social.name}>
                   <span className="group-hover:scale-110 transition-transform">
                     {social.icon}
                   </span>
-                </a>
-              ))}
+                </a>)}
             </div>
           </div>
 
@@ -65,17 +62,12 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-playfair font-bold mb-6">Naše usluge</h3>
             <ul className="space-y-3">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <a
-                    href="#services"
-                    className="text-white/80 hover:text-white transition-colors relative group"
-                  >
+              {services.map((service, index) => <li key={index}>
+                  <a href="#services" className="text-white/80 hover:text-white transition-colors relative group">
                     {service}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -83,17 +75,12 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-playfair font-bold mb-6">Brze veze</h3>
             <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-white/80 hover:text-white transition-colors relative group"
-                  >
+              {quickLinks.map((link, index) => <li key={index}>
+                  <a href={link.href} className="text-white/80 hover:text-white transition-colors relative group">
                     {link.name}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -143,6 +130,5 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }
