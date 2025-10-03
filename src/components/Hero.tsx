@@ -69,7 +69,7 @@ export default function Hero() {
           
           {/* Trust Signals */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
-            <div className="flex items-center justify-center gap-3 p-5 bg-white border-2 border-primary/20 rounded-xl hover-lift shadow-md hover:shadow-xl hover:border-primary/40 transition-all">
+            <div className="flex items-center justify-center gap-3 p-5 bg-card border-2 border-primary/20 rounded-xl hover-lift shadow-md hover:shadow-xl hover:border-primary/40 transition-all">
               <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/70 rounded-xl flex items-center justify-center shadow-lg">
                 <Code className="h-6 w-6 text-white" />
               </div>
@@ -79,7 +79,7 @@ export default function Hero() {
               </div>
             </div>
             
-            <div className="flex items-center justify-center gap-3 p-5 bg-white border-2 border-accent/20 rounded-xl hover-lift shadow-md hover:shadow-xl hover:border-accent/40 transition-all">
+            <div className="flex items-center justify-center gap-3 p-5 bg-card border-2 border-accent/20 rounded-xl hover-lift shadow-md hover:shadow-xl hover:border-accent/40 transition-all">
               <div className="w-12 h-12 bg-gradient-to-br from-accent to-accent/70 rounded-xl flex items-center justify-center shadow-lg">
                 <Zap className="h-6 w-6 text-white" />
               </div>
@@ -89,7 +89,7 @@ export default function Hero() {
               </div>
             </div>
             
-            <div className="flex items-center justify-center gap-3 p-5 bg-white border-2 border-secondary/20 rounded-xl hover-lift shadow-md hover:shadow-xl hover:border-secondary/40 transition-all">
+            <div className="flex items-center justify-center gap-3 p-5 bg-card border-2 border-secondary/20 rounded-xl hover-lift shadow-md hover:shadow-xl hover:border-secondary/40 transition-all">
               <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/70 rounded-xl flex items-center justify-center shadow-lg">
                 <Sparkles className="h-6 w-6 text-white" />
               </div>

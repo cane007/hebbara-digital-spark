@@ -54,7 +54,7 @@ export default function Technologies() {
     description: 'Brinemo se o hosting-u i redovnom održavanju vašeg sajta.',
     features: ['CDN integracija', 'Auto backups', '99.9% uptime']
   }];
-  return <section ref={sectionRef} id="technologies" className="section-padding bg-slate-400">
+  return <section ref={sectionRef} id="technologies" className="section-padding bg-gradient-to-b from-muted/30 to-background">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full mb-4">

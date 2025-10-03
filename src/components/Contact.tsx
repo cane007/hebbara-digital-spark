@@ -26,8 +26,14 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="section-padding bg-gradient-to-b from-background to-muted/20 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="floating absolute top-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="floating-alt absolute bottom-1/4 left-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold text-foreground mb-4">
@@ -41,40 +47,40 @@ export default function Contact() {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Phone className="h-6 w-6 text-primary" />
+              <div className="flex items-center space-x-4 group hover-lift">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform">
+                  <Phone className="h-7 w-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg">Telefon</h3>
-                  <p className="text-foreground/80">+385 91 234 5678</p>
+                  <h3 className="font-bold text-lg text-foreground">Telefon</h3>
+                  <p className="text-foreground/80 text-lg">+385 91 234 5678</p>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                  <Mail className="h-6 w-6 text-accent" />
+              <div className="flex items-center space-x-4 group hover-lift">
+                <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent/80 rounded-2xl flex items-center justify-center shadow-electric group-hover:scale-110 transition-transform">
+                  <Mail className="h-7 w-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg">Email</h3>
-                  <p className="text-foreground/80">info@hebberadesign.com</p>
+                  <h3 className="font-bold text-lg text-foreground">Email</h3>
+                  <p className="text-foreground/80 text-lg">info@hebberadesign.com</p>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <MapPin className="h-6 w-6 text-primary" />
+              <div className="flex items-center space-x-4 group hover-lift">
+                <div className="w-16 h-16 bg-gradient-to-br from-secondary to-secondary/80 rounded-2xl flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform">
+                  <MapPin className="h-7 w-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg">Lokacija</h3>
-                  <p className="text-foreground/80">Zagreb, Hrvatska</p>
+                  <h3 className="font-bold text-lg text-foreground">Lokacija</h3>
+                  <p className="text-foreground/80 text-lg">Zagreb, Hrvatska</p>
                 </div>
               </div>
             </div>
 
             {/* Contact Form */}
-            <Card className="border-0 shadow-xl bg-card">
-              <CardContent className="p-8">
+            <Card className="card-premium border-2 border-border/50 shadow-2xl">
+              <CardContent className="p-10">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <Input

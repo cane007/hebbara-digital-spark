@@ -43,14 +43,21 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <img src={logo} alt="Hebbera Design Logo" className="h-10 w-10 hover:scale-110 transition-transform duration-300" />
+          {/* Logo - ISTAKNUTO */}
+          <div className="flex items-center space-x-3 group">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
+              <img 
+                src={logo} 
+                alt="Hebbera Design Logo" 
+                className="h-12 w-12 relative z-10 group-hover:scale-110 transition-transform duration-300 rounded-xl shadow-xl" 
+              />
+            </div>
             <div className="flex flex-col">
-              <span className="text-lg font-bold gradient-text">
+              <span className="text-xl font-bold gradient-text">
                 Hebbera Design
               </span>
-              <span className="text-xs text-muted-foreground font-medium">
+              <span className="text-xs text-muted-foreground font-semibold">
                 Web Dizajn Studio
               </span>
             </div>
@@ -71,8 +78,16 @@ export default function Header() {
               
             </div>
             
-            <Button variant="ghost" size="icon" onClick={toggleTheme} className="hover:bg-secondary">
-              {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={toggleTheme} 
+              className="hover:bg-secondary/20 hover:scale-110 transition-all duration-300"
+            >
+              {theme === 'light' ? 
+                <Moon className="h-5 w-5 text-foreground" /> : 
+                <Sun className="h-5 w-5 text-foreground" />
+              }
             </Button>
             
             <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>

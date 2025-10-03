@@ -8,25 +8,25 @@ export default function About() {
       icon: <Target className="h-10 w-10" />,
       title: "Fokus na rezultate",
       description: "Svaki projekt pristupamo s jasnim ciljem - vaš uspjeh u digitalnom svijetu.",
-      gradient: "gradient-primary"
+      color: "primary"
     },
     {
       icon: <Zap className="h-10 w-10" />,
       title: "Inovacija",
       description: "Koristimo najnovije tehnologije i trendove za stvaranje izuzetnih digitalnih iskustava.",
-      gradient: "gradient-secondary"
+      color: "secondary"
     },
     {
       icon: <Users className="h-10 w-10" />,
       title: "Partnerstvo",
       description: "Nismo samo pružatelj usluga - mi smo vaš digitalni partner za dugoročni uspjeh.",
-      gradient: "gradient-accent"
+      color: "accent"
     },
     {
       icon: <Award className="h-10 w-10" />,
       title: "Kvaliteta",
       description: "Svaki detalj je važan. Težimo izvrsnosti u svakom pikselu i svakoj liniji koda.",
-      gradient: "gradient-tertiary"
+      color: "tertiary"
     }
   ];
 
@@ -35,32 +35,42 @@ export default function About() {
       number: "500+", 
       label: "Zadovoljnih klijenata", 
       icon: <Heart className="h-6 w-6" />,
-      gradient: "gradient-primary" 
+      color: "primary"
     },
     { 
       number: "5+", 
       label: "Godina iskustva", 
       icon: <Rocket className="h-6 w-6" />,
-      gradient: "gradient-secondary" 
+      color: "secondary"
     },
     { 
       number: "98%", 
       label: "Stopa zadovoljstva", 
       icon: <Star className="h-6 w-6" />,
-      gradient: "gradient-accent" 
+      color: "accent"
     },
     { 
       number: "7-14", 
       label: "Dana realizacije", 
       icon: <Trophy className="h-6 w-6" />,
-      gradient: "gradient-tertiary" 
+      color: "tertiary"
     }
   ];
+
+  const getColorClasses = (color: string) => {
+    const colors = {
+      primary: 'bg-primary hover:bg-primary/80',
+      secondary: 'bg-secondary hover:bg-secondary/80',
+      accent: 'bg-accent hover:bg-accent/80',
+      tertiary: 'bg-gradient-to-br from-tertiary to-tertiary/80'
+    };
+    return colors[color as keyof typeof colors] || colors.primary;
+  };
 
   return (
     <section id="about" className="section-padding section-dark relative overflow-hidden">
       {/* Advanced Background Effects */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 pointer-events-none">
         <div className="orbital absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
         <div className="floating-alt absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl"></div>
         <div className="floating absolute top-1/2 right-1/3 w-64 h-64 bg-accent/5 rounded-full blur-2xl"></div>
@@ -84,14 +94,14 @@ export default function About() {
               
               <p className="text-2xl text-foreground/90 leading-relaxed mb-8 font-light">
                 <span className="text-primary font-bold">Hebbera Design</span> je vodeći web dizajn studio specijaliziran za 
-                <span className="text-secondary font-bold">Hrvatsko, Srpsko, Bosansko, Crnogorsko i Slovensko tržište</span>. 
+                <span className="text-secondary font-bold"> Hrvatsko, Srpsko, Bosansko, Crnogorsko i Slovensko tržište</span>. 
                 Sa više od <span className="text-accent font-bold">5 godina iskustva</span>, realizirali smo preko 
-                <span className="text-tertiary font-bold">500 uspješnih projekata</span>.
+                <span className="text-primary font-bold"> 500 uspješnih projekata</span>.
               </p>
               
               <p className="text-xl text-foreground/80 leading-relaxed mb-10">
-                Razumijemo <span className="text-electric font-bold">mentalitet, kulturu i potrebe Balkanskih kupaca</span>. 
-                Kreiramo web stranice koje <span className="text-neon font-bold">govore vašim klijentima na njihovom jeziku</span> 
+                Razumijemo <span className="text-secondary font-bold">mentalitet, kulturu i potrebe Balkanskih kupaca</span>. 
+                Kreiramo web stranice koje <span className="text-accent font-bold">govore vašim klijentima na njihovom jeziku</span> 
                 i povećavaju prodaju za 200-400%.
               </p>
 
@@ -105,14 +115,14 @@ export default function About() {
             <div className="grid grid-cols-2 gap-8">
               {stats.map((stat, index) => (
                 <Card key={index} className="card-interactive group p-6 relative overflow-hidden">
-                  <div className={`absolute inset-0 bg-${stat.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                  <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <div className="relative z-10 text-center">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-${stat.gradient} rounded-2xl mb-4 text-white group-hover:scale-125 transition-transform duration-300`}>
+                    <div className={`inline-flex items-center justify-center w-12 h-12 ${getColorClasses(stat.color)} rounded-2xl mb-4 text-white group-hover:scale-125 transition-transform duration-300 shadow-glow`}>
                       {stat.icon}
                     </div>
                     
-                    <div className={`text-4xl font-bold text-gradient bg-${stat.gradient} bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300`}>
+                    <div className="text-4xl font-bold gradient-text mb-2 group-hover:scale-110 transition-transform duration-300">
                       {stat.number}
                     </div>
                     
@@ -129,10 +139,10 @@ export default function About() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 animate-slide-in-right">
             {values.map((value, index) => (
               <Card key={index} className="card-premium group h-full tilt-hover relative overflow-hidden">
-                <div className={`absolute inset-0 bg-${value.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-700`}></div>
+                <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 
                 <CardContent className="p-8 relative z-10">
-                  <div className={`inline-flex items-center justify-center w-20 h-20 bg-${value.gradient} rounded-3xl mb-6 text-white group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-glow`}>
+                  <div className={`inline-flex items-center justify-center w-20 h-20 ${getColorClasses(value.color)} rounded-3xl mb-6 text-white group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-glow`}>
                     {value.icon}
                   </div>
                   
@@ -156,11 +166,11 @@ export default function About() {
         {/* Revolutionary Call to Action */}
         <div className="mt-24">
           <Card className="card-premium relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
-            <div className="absolute inset-0 bg-gradient-mesh opacity-30"></div>
+            <div className="absolute inset-0 gradient-hero opacity-90"></div>
+            <div className="absolute inset-0 gradient-mesh opacity-30"></div>
             
             {/* Animated Background Elements */}
-            <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
               <div className="floating absolute top-8 left-8 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
               <div className="floating-alt absolute bottom-8 right-8 w-40 h-40 bg-secondary/15 rounded-full blur-2xl"></div>
             </div>
@@ -170,7 +180,7 @@ export default function About() {
               {[...Array(8)].map((_, i) => (
                 <div 
                   key={i}
-                  className="absolute w-1 h-1 bg-primary-glow rounded-full animate-floating opacity-60"
+                  className="absolute w-1 h-1 bg-primary rounded-full animate-pulse opacity-60"
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
@@ -185,7 +195,7 @@ export default function About() {
               
               <p className="text-xl text-foreground/90 mb-8 max-w-3xl mx-auto">
                 Kontaktirajte nas danas i saznajte kako možemo pomoći vašem biznisu 
-                da postigne <span className="text-electric font-bold">online uspjeh koji zaslužuje</span>.
+                da postigne <span className="text-primary font-bold">online uspjeh koji zaslužuje</span>.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
