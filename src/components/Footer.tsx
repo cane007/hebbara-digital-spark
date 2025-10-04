@@ -32,7 +32,7 @@ export default function Footer() {
     href: "#",
     name: "LinkedIn"
   }];
-  return <footer className="bg-gradient-dark text-[hsl(var(--footer-fg))]">
+  return <footer className="bg-gradient-to-br from-[#1a1f2e] via-[#252b3d] to-[#1a1f2e] text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -44,13 +44,13 @@ export default function Footer() {
                 Hebbera Design
               </span>
             </div>
-            <p className="text-[hsl(var(--footer-fg))]/80 mb-6 leading-relaxed">
+            <p className="text-gray-300 mb-6 leading-relaxed">
               Vaš partner za digitalnu transformaciju. Kreiramo web stranice, 
               pokretamo uspješne kampanje i pomažemo vašem biznisu da 
               postane vidljiv na internetu.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((social, index) => <a key={index} href={social.href} className="flex items-center justify-center w-10 h-10 bg-primary hover:bg-primary/80 rounded-xl transition-all duration-300 hover:scale-110 group" aria-label={social.name}>
+              {socialLinks.map((social, index) => <a key={index} href={social.href} className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-primary to-secondary hover:from-secondary hover:to-accent rounded-xl transition-all duration-300 hover:scale-110 group shadow-lg" aria-label={social.name}>
                   <span className="text-white group-hover:scale-110 transition-transform">
                     {social.icon}
                   </span>
@@ -63,9 +63,9 @@ export default function Footer() {
             <h3 className="text-xl font-playfair font-bold mb-6">Naše usluge</h3>
             <ul className="space-y-3">
               {services.map((service, index) => <li key={index}>
-                  <a href="#services" className="text-[hsl(var(--footer-fg))]/80 hover:text-[hsl(var(--footer-fg))] transition-colors relative group">
+                  <a href="#services" className="text-gray-300 hover:text-white transition-colors relative group">
                     {service}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-accent to-secondary group-hover:w-full transition-all duration-300"></span>
                   </a>
                 </li>)}
             </ul>
@@ -76,9 +76,9 @@ export default function Footer() {
             <h3 className="text-xl font-playfair font-bold mb-6">Brze veze</h3>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => <li key={index}>
-                  <a href={link.href} className="text-[hsl(var(--footer-fg))]/80 hover:text-[hsl(var(--footer-fg))] transition-colors relative group">
+                  <a href={link.href} className="text-gray-300 hover:text-white transition-colors relative group">
                     {link.name}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
                   </a>
                 </li>)}
             </ul>
@@ -90,19 +90,19 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-accent flex-shrink-0" />
-                <a href="mailto:info@hebberadesign.com" className="text-[hsl(var(--footer-fg))]/80 hover:text-[hsl(var(--footer-fg))] transition-colors">
+                <a href="mailto:info@hebberadesign.com" className="text-gray-300 hover:text-white transition-colors">
                   info@hebberadesign.com
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-accent flex-shrink-0" />
-                <a href="tel:+38591234567" className="text-[hsl(var(--footer-fg))]/80 hover:text-[hsl(var(--footer-fg))] transition-colors">
+                <Phone className="h-5 w-5 text-secondary flex-shrink-0" />
+                <a href="tel:+38591234567" className="text-gray-300 hover:text-white transition-colors">
                   +385 91 234 5678
                 </a>
               </li>
               <li className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                <span className="text-[hsl(var(--footer-fg))]/80">
+                <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-gray-300">
                   Zagreb, Hrvatska
                 </span>
               </li>
@@ -111,19 +111,19 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-[hsl(var(--footer-fg))]/10 py-8">
+        <div className="border-t border-white/10 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-[hsl(var(--footer-fg))]/60 text-center md:text-left">
+            <div className="text-gray-400 text-center md:text-left">
               © {currentYear} Hebbera Design. Sva prava pridržana.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-[hsl(var(--footer-fg))]/60 hover:text-[hsl(var(--footer-fg))] transition-colors">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 Pravila privatnosti
               </a>
-              <a href="#" className="text-[hsl(var(--footer-fg))]/60 hover:text-[hsl(var(--footer-fg))] transition-colors">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 Uvjeti korištenja
               </a>
-              <a href="#" className="text-[hsl(var(--footer-fg))]/60 hover:text-[hsl(var(--footer-fg))] transition-colors">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 Kolačići
               </a>
             </div>
