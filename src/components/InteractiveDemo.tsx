@@ -62,7 +62,7 @@ export const ProductPage = () => {
           <h3 className="text-2xl font-bold text-foreground mb-2">
             Vidite Hebbera AI u akciji
           </h3>
-          <p className="text-foreground/70">
+          <p className="text-muted-foreground">
             Iz ideje do live aplikacije u 12 minuta
           </p>
         </div>
@@ -75,9 +75,9 @@ export const ProductPage = () => {
                 <div className="w-3 h-3 rounded-full bg-secondary"></div>
                 <div className="w-3 h-3 rounded-full bg-tertiary"></div>
               </div>
-              <span className="text-sm text-foreground/60">hebbera-demo.terminal</span>
+              <span className="text-sm text-muted-foreground">hebbera-demo.terminal</span>
             </div>
-            <div className="flex items-center gap-2 text-sm text-foreground/60">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Clock className="w-4 h-4" />
               <span>12:00 minuta</span>
             </div>
@@ -101,13 +101,13 @@ export const ProductPage = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">{step.title}</p>
-                    <p className="text-sm text-foreground/60">{step.description}</p>
+                    <p className="text-sm text-muted-foreground">{step.description}</p>
                   </div>
                 </div>
                 
                 <div className="bg-background/90 rounded p-3 mt-3 font-mono text-sm">
                   <pre className={`transition-all duration-300 ${
-                    index === demoStep ? 'text-primary' : 'text-foreground/50'
+                    index === demoStep ? 'text-primary' : 'text-muted-foreground'
                   }`}>
                     {step.code}
                   </pre>

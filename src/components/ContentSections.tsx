@@ -109,7 +109,7 @@ export default function ContentSections() {
             <h2 className="text-4xl font-bold text-foreground mb-6">
               Zašto odabrati Hebbera Design?
             </h2>
-            <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Revolucijska AI tehnologija koja mijenja način kako se web aplikacije stvaraju. 
               Brže, jeftinije i efikasnije od tradicionalnog pristupa.
             </p>
@@ -125,7 +125,7 @@ export default function ContentSections() {
                   <h3 className="text-xl font-bold text-foreground mb-3">
                     {benefit.title}
                   </h3>
-                  <p className="text-foreground/70 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     {benefit.description}
                   </p>
                 </div>
@@ -142,7 +142,7 @@ export default function ContentSections() {
             <h2 className="text-4xl font-bold text-foreground mb-6">
               Kako funkcionira naš AI proces?
             </h2>
-            <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Detaljan uvid u proces stvaranja vaše web aplikacije - od ideje do live produkta
             </p>
           </div>
@@ -160,7 +160,7 @@ export default function ContentSections() {
                   <h3 className="text-2xl font-bold text-foreground mb-4">
                     {item.title}
                   </h3>
-                  <p className="text-lg text-foreground/80 mb-6">
+                  <p className="text-lg text-muted-foreground mb-6">
                     {item.description}
                   </p>
                   
@@ -168,7 +168,7 @@ export default function ContentSections() {
                     {item.details.map((detail, detailIndex) => (
                       <div key={detailIndex} className="flex items-start gap-3">
                         <CheckCircle className="w-5 h-5 text-tertiary mt-0.5 flex-shrink-0" />
-                        <span className="text-foreground/70 text-sm">
+                        <span className="text-muted-foreground text-sm">
                           {detail}
                         </span>
                       </div>
@@ -188,7 +188,7 @@ export default function ContentSections() {
             <h2 className="text-4xl font-bold text-foreground mb-6">
               Što možete izgraditi s Hebbera Design?
             </h2>
-            <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Od jednostavnih landing stranica do kompleksnih SaaS aplikacija - naš AI može sve
             </p>
           </div>
@@ -199,7 +199,7 @@ export default function ContentSections() {
                 <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                   {useCase.title}
                 </h3>
-                <p className="text-foreground/70 leading-relaxed mb-4">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   {useCase.description}
                 </p>
                 <div className="flex items-center text-primary text-sm font-semibold group-hover:translate-x-2 transition-transform">
@@ -218,7 +218,7 @@ export default function ContentSections() {
             <h2 className="text-4xl font-bold text-foreground mb-6">
               Kakav je poslovni utjecaj Hebbera Design?
             </h2>
-            <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Brojevi govore sami za sebe - pogledajte kako naši klijenti ostvaruju rezultate
             </p>
           </div>
@@ -227,19 +227,19 @@ export default function ContentSections() {
             <Card className="card-glass p-6 text-center">
               <TrendingUp className="w-12 h-12 text-accent mx-auto mb-4" />
               <div className="text-3xl font-bold text-accent mb-2">500%</div>
-              <div className="text-foreground/70">Povećanje ROI-a u prosjeku</div>
+              <div className="text-muted-foreground">Povećanje ROI-a u prosjeku</div>
             </Card>
             
             <Card className="card-glass p-6 text-center">
               <Clock className="w-12 h-12 text-primary mx-auto mb-4" />
               <div className="text-3xl font-bold text-primary mb-2">95%</div>
-              <div className="text-foreground/70">Ušteda vremena razvoja</div>
+              <div className="text-muted-foreground">Ušteda vremena razvoja</div>
             </Card>
             
             <Card className="card-glass p-6 text-center">
               <Star className="w-12 h-12 text-secondary mx-auto mb-4" />
               <div className="text-3xl font-bold text-secondary mb-2">4.9/5</div>
-              <div className="text-foreground/70">Prosječna ocjena korisnika</div>
+              <div className="text-muted-foreground">Prosječna ocjena korisnika</div>
             </Card>
           </div>
 
@@ -250,10 +250,10 @@ export default function ContentSections() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h4 className="text-lg font-semibold text-foreground/80 mb-4">
+                <h4 className="text-lg font-semibold text-muted-foreground mb-4">
                   🐌 Tradicionalni razvoj
                 </h4>
-                <ul className="space-y-2 text-foreground/70">
+                <ul className="space-y-2 text-muted-foreground">
                   <li>• 3-6 mjeseci razvoja</li>
                   <li>• €15,000 - €50,000 troškova</li>
                   <li>• Tim od 3-5 developera</li>
@@ -266,7 +266,7 @@ export default function ContentSections() {
                 <h4 className="text-lg font-semibold text-primary mb-4">
                   🚀 Hebbera Design
                 </h4>
-                <ul className="space-y-2 text-foreground/70">
+                <ul className="space-y-2 text-foreground">
                   <li>• 12 minuta do prve verzije</li>
                   <li>• €0 - €99/mjesec</li>
                   <li>• Samo vi i naš AI</li>

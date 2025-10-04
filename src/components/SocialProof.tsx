@@ -60,12 +60,12 @@ export default function SocialProof() {
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/20 text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   {stat.icon}
                 </div>
-                <div className="text-3xl font-bold text-foreground mb-2 text-gradient">
-                  {stat.number}
-                </div>
-                <div className="text-sm text-foreground/70">
-                  {stat.label}
-                </div>
+              <div className="text-3xl font-bold gradient-text mb-2">
+                {stat.number}
+              </div>
+              <div className="text-sm text-muted-foreground">
+                {stat.label}
+              </div>
               </div>
             </div>
           ))}
@@ -76,7 +76,7 @@ export default function SocialProof() {
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Što kažu naši korisnici?
           </h2>
-          <p className="text-xl text-foreground/70">
+          <p className="text-xl text-muted-foreground">
             Pridružite se tisućama koji već koriste Hebbera Design
           </p>
         </div>
@@ -92,7 +92,7 @@ export default function SocialProof() {
               </div>
 
               {/* Quote */}
-              <blockquote className="text-foreground/90 mb-6 leading-relaxed">
+              <blockquote className="text-foreground mb-6 leading-relaxed">
                 "{testimonial.quote}"
               </blockquote>
 
@@ -110,7 +110,7 @@ export default function SocialProof() {
                   <div className="font-semibold text-foreground">
                     {testimonial.name}
                   </div>
-                  <div className="text-sm text-foreground/60">
+                  <div className="text-sm text-muted-foreground">
                     {testimonial.role}
                   </div>
                 </div>
@@ -121,7 +121,7 @@ export default function SocialProof() {
 
         {/* Trust indicators */}
         <div className="mt-16 text-center">
-          <p className="text-foreground/60 mb-6">Povjerenje prestižnih brendova</p>
+          <p className="text-muted-foreground mb-6">Povjerenje prestižnih brendova</p>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
             <div className="px-6 py-3 bg-card/50 rounded-lg border border-primary/20 text-foreground font-semibold">
               TechCorp

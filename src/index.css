@@ -146,7 +146,15 @@
   }
   
   .btn-glass {
-    @apply bg-white/10 backdrop-blur-lg border border-white/20 text-foreground hover:bg-white/20 hover:border-white/30 px-8 py-4 rounded-xl font-semibold transition-all duration-300;
+    @apply bg-card/10 backdrop-blur-lg border border-border/30 text-foreground hover:bg-card/20 hover:border-border/50 px-8 py-4 rounded-xl font-semibold transition-all duration-300;
+  }
+  
+  .btn-cta-primary {
+    @apply bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:shadow-2xl hover:scale-105 px-8 py-4 rounded-xl font-semibold transition-all duration-300;
+  }
+  
+  .btn-secondary-cta {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 rounded-xl font-semibold transition-all duration-300;
   }
   
   /* Professional Card Styles */
@@ -169,6 +177,10 @@
   
   .section-dark {
     @apply bg-gradient-to-b from-muted/30 to-background;
+  }
+  
+  .gradient-subtle {
+    @apply bg-gradient-to-b from-muted/20 via-background to-muted/10;
   }
   
   /* Gradient Backgrounds */

@@ -36,7 +36,7 @@ export default function VisualSteps() {
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Kako funkcionira Hebbera Design?
           </h2>
-          <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Tri jednostavna koraka do vaše web aplikacije
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function VisualSteps() {
                   {step.subtitle}
                 </p>
                 
-                <p className="text-foreground/70 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   {step.description}
                 </p>
 

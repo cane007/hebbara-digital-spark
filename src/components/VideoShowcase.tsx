@@ -17,7 +17,7 @@ export default function VideoShowcase() {
           <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-foreground mb-4">
             Gledajte Kako <span className="text-primary">Magic Nastaje</span>
           </h2>
-          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Od prve ideje do live web stranice - pogledajte naš proces rada u akciji
           </p>
         </div>
@@ -32,7 +32,7 @@ export default function VideoShowcase() {
                 <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
                 <div className="w-3 h-3 bg-green-400 rounded-full"></div>
               </div>
-              <div className="text-xs text-foreground/60 font-mono">
+              <div className="text-xs text-muted-foreground font-mono">
                 hebbera-design-process.mp4
               </div>
             </div>
@@ -69,7 +69,7 @@ export default function VideoShowcase() {
                       <h3 className="text-xl font-semibold text-foreground mb-2">
                         Hebbera Design Process u Akciji
                       </h3>
-                      <p className="text-foreground/70 text-sm">
+                      <p className="text-muted-foreground text-sm">
                         3 minute demo • Potpuni workflow od ideje do deployment-a
                       </p>
                     </div>
@@ -79,15 +79,15 @@ export default function VideoShowcase() {
                   <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end opacity-60">
                     <div className="bg-card/80 rounded-lg p-2 backdrop-blur-sm border border-border/30">
                       <div className="w-16 h-10 bg-gradient-primary rounded opacity-80"></div>
-                      <div className="text-xs text-center mt-1 text-foreground/60">Desktop</div>
+                      <div className="text-xs text-center mt-1 text-muted-foreground">Desktop</div>
                     </div>
                     <div className="bg-card/80 rounded-lg p-2 backdrop-blur-sm border border-border/30">
                       <div className="w-12 h-8 bg-gradient-secondary rounded opacity-80"></div>
-                      <div className="text-xs text-center mt-1 text-foreground/60">Tablet</div>
+                      <div className="text-xs text-center mt-1 text-muted-foreground">Tablet</div>
                     </div>
                     <div className="bg-card/80 rounded-lg p-2 backdrop-blur-sm border border-border/30">
                       <div className="w-8 h-10 bg-gradient-accent rounded opacity-80"></div>
-                      <div className="text-xs text-center mt-1 text-foreground/60">Mobile</div>
+                      <div className="text-xs text-center mt-1 text-muted-foreground">Mobile</div>
                     </div>
                   </div>
                 </>
@@ -95,8 +95,8 @@ export default function VideoShowcase() {
                 <div className="absolute inset-0 bg-background flex items-center justify-center">
                   <div className="text-center animate-fade-in">
                     <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mb-4 mx-auto"></div>
-                    <p className="text-foreground/80">Učitava se demo video...</p>
-                    <p className="text-sm text-foreground/60 mt-2">
+                    <p className="text-foreground">Učitava se demo video...</p>
+                    <p className="text-sm text-muted-foreground mt-2">
                       Kontaktirajte nas za live demo prezentaciju!
                     </p>
                   </div>
@@ -113,7 +113,7 @@ export default function VideoShowcase() {
               <span className="text-2xl font-bold text-primary">1</span>
             </div>
             <h3 className="text-lg font-semibold text-foreground mb-2">Konzultacija</h3>
-            <p className="text-foreground/70 text-sm">
+            <p className="text-muted-foreground text-sm">
               Analizirajemo vaše potrebe i ciljevе
             </p>
           </div>
@@ -123,7 +123,7 @@ export default function VideoShowcase() {
               <span className="text-2xl font-bold text-secondary">2</span>
             </div>
             <h3 className="text-lg font-semibold text-foreground mb-2">Dizajn & Razvoj</h3>
-            <p className="text-foreground/70 text-sm">
+            <p className="text-muted-foreground text-sm">
               Kreiramo modernu, responzivnu stranicu
             </p>
           </div>
@@ -133,7 +133,7 @@ export default function VideoShowcase() {
               <span className="text-2xl font-bold text-accent">3</span>
             </div>
             <h3 className="text-lg font-semibold text-foreground mb-2">Launch & Podrška</h3>
-            <p className="text-foreground/70 text-sm">
+            <p className="text-muted-foreground text-sm">
               Lansiramo i održavamo vašu stranicu
             </p>
           </div>
@@ -145,7 +145,7 @@ export default function VideoShowcase() {
             Zakazujte Besplatnu Konzultaciju
             <Play className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <p className="text-sm text-foreground/60 mt-3">
+          <p className="text-sm text-muted-foreground mt-3">
             30-minutni razgovor o vašem projektu • Bez obveza
           </p>
         </div>

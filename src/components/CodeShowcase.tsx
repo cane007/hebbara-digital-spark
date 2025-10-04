@@ -96,7 +96,7 @@ CREATE INDEX idx_products_user ON products(user_id);`
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Pogledajte kod koji Hebbera generira
           </h2>
-          <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Production-ready kod koji ne morate nikad pisati. Samo kopirajte, modificirajte i koristite.
           </p>
         </div>
@@ -126,7 +126,7 @@ CREATE INDEX idx_products_user ON products(user_id);`
                 <h3 className="font-semibold text-foreground">
                   {codeExamples[activeTab].title}
                 </h3>
-                <p className="text-sm text-foreground/60">
+                <p className="text-sm text-muted-foreground">
                   {codeExamples[activeTab].description}
                 </p>
               </div>
@@ -162,7 +162,7 @@ CREATE INDEX idx_products_user ON products(user_id);`
                   ) : (
                     <>
                       <Copy className="w-4 h-4" />
-                      Copy
+                      Kopiraj
                     </>
                   )}
                 </Button>
@@ -186,7 +186,7 @@ CREATE INDEX idx_products_user ON products(user_id);`
               <Check className="w-6 h-6" />
             </div>
             <h3 className="font-semibold text-foreground mb-2">Production Ready</h3>
-            <p className="text-sm text-foreground/60">
+            <p className="text-sm text-muted-foreground">
               Kod spreman za produkciju, s error handling-om i optimizacijama
             </p>
           </div>
@@ -196,7 +196,7 @@ CREATE INDEX idx_products_user ON products(user_id);`
               <Copy className="w-6 h-6" />
             </div>
             <h3 className="font-semibold text-foreground mb-2">Lako Modificirati</h3>
-            <p className="text-sm text-foreground/60">
+            <p className="text-sm text-muted-foreground">
               Čist, čitljiv kod koji možete prilagoditi svojim potrebama
             </p>
           </div>
@@ -206,7 +206,7 @@ CREATE INDEX idx_products_user ON products(user_id);`
               <ChevronRight className="w-6 h-6" />
             </div>
             <h3 className="font-semibold text-foreground mb-2">Best Practices</h3>
-            <p className="text-sm text-foreground/60">
+            <p className="text-sm text-muted-foreground">
               Slijedi najnovije standarde i najbolje prakse developmenta
             </p>
           </div>
