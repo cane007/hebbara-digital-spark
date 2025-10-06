@@ -56,7 +56,7 @@ export default function Services() {
   ];
 
   return (
-    <section ref={sectionRef} id="services" className="section-padding bg-gradient-to-b from-white to-muted/50">
+    <section ref={sectionRef} id="services" className="section-padding bg-gradient-to-b from-background via-muted/30 to-background">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-foreground mb-4">
@@ -69,9 +69,9 @@ export default function Services() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
-            <Card key={index} className="service-card fade-in-up card-clean group hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-2 hover:border-primary/30">
+            <Card key={index} className="service-card fade-in-up card-clean group hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border-2 hover:border-primary/50 hover:animate-pulse-glow">
               <CardContent className="p-7">
-                <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-lg">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary via-secondary to-accent rounded-xl flex items-center justify-center mb-5 group-hover:scale-125 group-hover:rotate-6 transition-all duration-300 shadow-lg">
                   <service.icon className="h-7 w-7 text-white" />
                 </div>
                 

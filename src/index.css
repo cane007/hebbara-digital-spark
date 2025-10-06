@@ -7,49 +7,49 @@
 /* Clean Hebbera Design System */
 @layer base {
   :root {
-    /* Light Theme - DRAMATIČNO POBOLJŠANE boje za maksimalan kontrast */
-    --background: 0 0% 100%;
+    /* Light Theme - Živahne boje sa minimalnom belom */
+    --background: 250 20% 96%;
     --foreground: 222 47% 11%;
     
-    --card: 0 0% 100%;
+    --card: 0 0% 98%;
     --card-foreground: 222 47% 11%;
     
-    --popover: 0 0% 100%;
+    --popover: 0 0% 98%;
     --popover-foreground: 222 47% 11%;
     
-    /* Primary - Vibrant Professional Blue */
-    --primary: 221 83% 53%;
+    /* Primary - Electric Purple */
+    --primary: 262 83% 58%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 221 83% 90%;
-    --primary-dark: 221 83% 35%;
+    --primary-light: 262 83% 90%;
+    --primary-dark: 262 83% 35%;
     
-    /* Secondary - Rich Purple */
-    --secondary: 271 81% 56%;
+    /* Secondary - Hot Pink */
+    --secondary: 338 100% 65%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 271 81% 90%;
+    --secondary-light: 338 100% 90%;
     
-    /* Accent - Vibrant Orange */
-    --accent: 25 95% 53%;
+    /* Accent - Bright Cyan */
+    --accent: 178 84% 56%;
     --accent-foreground: 0 0% 100%;
-    --accent-light: 25 95% 90%;
+    --accent-light: 178 84% 90%;
     
-    /* Tertiary - Electric Cyan */
-    --tertiary: 185 84% 44%;
+    /* Tertiary - Neon Green */
+    --tertiary: 142 76% 50%;
     --tertiary-foreground: 0 0% 100%;
     
     /* Success - Vibrant Green */
-    --success: 142 76% 36%;
+    --success: 142 76% 45%;
     --success-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 220 13% 85%;
-    --input: 220 13% 91%;
-    --ring: 221 83% 53%;
+    --border: 250 12% 88%;
+    --input: 250 12% 92%;
+    --ring: 262 83% 58%;
     
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 40%;
+    --muted: 250 15% 94%;
+    --muted-foreground: 220 9% 46%;
     
     /* Footer specific colors */
     --footer-bg: 222 47% 11%;
@@ -116,10 +116,16 @@
   
   body {
     @apply bg-background text-foreground font-inter;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
   }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-playfair;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
   }
 }
 
@@ -318,11 +324,21 @@
   
   /* Text Gradients */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 4s ease infinite;
   }
   
   .text-gradient {
     @apply bg-clip-text text-transparent;
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
   }
   
   /* Hover Effects */
@@ -345,5 +361,46 @@
   
   .shadow-electric {
     box-shadow: 0 0 40px hsl(var(--accent) / 0.4);
+  }
+  
+  /* Dodatne animacije */
+  @keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.5); 
+    }
+    50% { 
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.8), 0 0 60px hsl(var(--secondary) / 0.5); 
+    }
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+  }
+  
+  @keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .animate-bounce-subtle {
+    animation: bounce-subtle 2s ease-in-out infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+  }
+  
+  .animate-rotate-slow {
+    animation: rotate-slow 20s linear infinite;
   }
 }
