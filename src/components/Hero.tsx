@@ -41,7 +41,7 @@ export default function Hero() {
           {/* Badge */}
           <div style={{
           backgroundSize: '200% auto'
-        }} className="inline-flex items-center gap-2 bg-gradient-to-r from-primary via-secondary to-accent rounded-full mb-6 animate-shimmer shadow-lg hover:shadow-2xl transition-all hover:scale-105 px-[100px] py-[10px] mx-0 my-[12px]">
+        }} className="inline-flex items-center gap-2 bg-gradient-to-r from-primary via-secondary to-accent rounded-full mb-6 animate-shimmer shadow-lg hover:shadow-2xl transition-all hover:scale-105 mx-0 my-[3px] px-[15px] py-[3px]">
             <Sparkles className="h-4 w-4 text-white animate-bounce-subtle" />
             <span className="text-sm font-bold text-white">Novi pristup web dizajnu na Balkanu</span>
           </div>
