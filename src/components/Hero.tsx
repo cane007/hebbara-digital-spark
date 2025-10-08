@@ -53,10 +53,10 @@ export default function Hero() {
             <span className="text-sm font-bold text-white">Novi pristup web dizajnu na Balkanu</span>
           </div>
           
-          {/* Main Headline with Typewriter Effect */}
+          {/* Main Headline with Typewriter Effect and H1 for SEO */}
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-playfair font-bold text-foreground mb-6 leading-tight">
-            <span className="block mb-2 animate-fade-in-down">Hebbera Design</span>
-            <span className="gradient-text block min-h-[1.2em]">
+            <span className="block mb-2 animate-fade-in-down">Hebbera Design - Web Dizajn Studio</span>
+            <span className="gradient-text block min-h-[1.2em] animate-gradient-shift">
               {displayText}
               <span className="animate-pulse">|</span>
             </span>

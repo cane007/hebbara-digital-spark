@@ -53,7 +53,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg text-foreground">Telefon</h3>
-                  <p className="text-foreground/80 text-lg">+385 91 234 5678</p>
+                  <p className="text-muted-foreground text-lg">+385 91 234 5678</p>
                 </div>
               </div>
 
@@ -63,7 +63,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg text-foreground">Email</h3>
-                  <p className="text-foreground/80 text-lg">info@hebberadesign.com</p>
+                  <p className="text-muted-foreground text-lg">info@hebberadesign.com</p>
                 </div>
               </div>
 
@@ -73,7 +73,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg text-foreground">Lokacija</h3>
-                  <p className="text-foreground/80 text-lg">Zagreb, Hrvatska</p>
+                  <p className="text-muted-foreground text-lg">Zagreb, Hrvatska</p>
                 </div>
               </div>
             </div>

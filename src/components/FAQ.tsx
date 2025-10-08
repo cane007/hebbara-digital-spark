@@ -65,30 +65,36 @@ export default function FAQ() {
   ];
 
   return (
-    <section ref={sectionRef} id="faq" className="section-padding fade-in-up bg-gradient-to-b from-secondary/20 to-background">
-      <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4">
-            <HelpCircle className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Često Postavljena Pitanja</span>
+    <section ref={sectionRef} id="faq" className="section-padding fade-in-up bg-gradient-to-b from-background via-secondary/10 to-background relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse-glow"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float-y"></div>
+      </div>
+
+      <div className="container mx-auto max-w-4xl relative z-10">
+        <div className="text-center mb-12 animate-fade-in-down">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-secondary/20 via-primary/20 to-accent/20 rounded-full mb-4 border border-secondary/30 hover:scale-105 transition-transform">
+            <HelpCircle className="h-4 w-4 text-secondary animate-bounce-subtle" />
+            <span className="text-sm font-bold text-secondary">Često Postavljena Pitanja</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold text-foreground mb-4">
-            Imate Pitanja?
+            Imate <span className="gradient-text">Pitanja</span>?
           </h2>
           <p className="text-xl text-muted-foreground">
             Odgovori na najčešća pitanja naših klijenata
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="w-full space-y-4">
+        <Accordion type="single" collapsible className="w-full space-y-4 animate-fade-in-up">
           {faqs.map((faq, index) => (
             <AccordionItem 
               key={index} 
               value={`item-${index}`}
-              className="bg-card border border-border rounded-lg px-6 hover:shadow-md transition-shadow"
+              className="bg-gradient-to-br from-card to-card/70 border-2 border-border/50 rounded-xl px-6 hover:border-primary/30 hover:shadow-xl hover-glow transition-all duration-300 backdrop-blur-sm"
             >
-              <AccordionTrigger className="text-left hover:no-underline py-5">
-                <span className="font-semibold text-foreground pr-4">
+              <AccordionTrigger className="text-left hover:no-underline py-5 group">
+                <span className="font-bold text-foreground pr-4 group-hover:text-primary transition-colors">
                   {faq.question}
                 </span>
               </AccordionTrigger>
@@ -99,13 +105,19 @@ export default function FAQ() {
           ))}
         </Accordion>
 
-        <div className="mt-12 text-center p-6 bg-primary/5 rounded-lg border border-primary/20">
-          <p className="text-foreground font-medium mb-2">
+        <div className="mt-12 text-center p-8 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 rounded-2xl border-2 border-primary/30 hover:border-primary/50 hover-lift transition-all animate-scale-in">
+          <p className="text-foreground font-bold text-lg mb-2">
             Niste pronašli odgovor na vaše pitanje?
           </p>
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground mb-4">
             Kontaktirajte nas direktno i odgovorićemo u roku od 24 sata.
           </p>
+          <a 
+            href="#contact"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-accent text-white font-bold rounded-xl hover:scale-105 transition-all shadow-lg"
+          >
+            Pošaljite pitanje
+          </a>
         </div>
       </div>
     </section>
